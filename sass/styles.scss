@@ -1,0 +1,10 @@
+@use "_variables.scss";
+@use "_mixins.scss";
+@use "_functions.scss";
+@use "_buttons.scss";
+@use "_forms.scss";
+@use "effects.scss";
+
+.box-logo{
+    @include flexcenter100;
+}
