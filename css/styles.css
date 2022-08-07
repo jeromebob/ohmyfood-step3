@@ -1,17 +1,121 @@
-/* Error: Undefined mixin.
- *   ,
- * 9 |     @include flexcenter100;
- *   |     ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   ..\sass\styles.scss 9:5  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 9 \2502      @include flexcenter100;\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   ..\\sass\\styles.scss 9:5  root stylesheet";
+@charset "UTF-8";
+/*MIXINS*/
+/*position absolue en 50-50 sur axe X et Y
+@include absolute pas besoin de paranthèse (valuer deja connu)*/
+@keyframes spin {
+  0% {
+    transform: rotate(Odeg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 30px #99E2D0;
+    background-color: #9356DC;
+  }
+  30% {
+    box-shadow: none;
+  }
+  60% {
+    box-shadow: 0 0 40px #FA8072;
+    background-color: #99E2D0;
+  }
+  90% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 30px #9356DC;
+    background-color: #FF79DA;
+  }
+}
+.fondu-loader {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .body, #box-logo, .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+  .imgheader {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .loader-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .loader {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    animation: spin 2s linear infinite;
+    border-top-color: #99E2D0;
+  }
+  .loader::before, .loader::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid transparent;
+  }
+  .loader::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: #FF79DA;
+    animation: spin 3s linear infinite;
+  }
+  .loader::after {
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: #9356DC;
+    animation: spin 1.5s linear infinite;
+  }
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 105px;
+    right: 105px;
+    bottom: 105px;
+    left: 105px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 2;
+    animation: flash 3s cubic-bezier(0.57, 0, 0.5, 0.99) infinite;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

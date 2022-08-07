@@ -1,6 +1,79 @@
+/*MIXINS*/
+@mixin fontcolor($couleur, $valeur){
+    #{$couleur}: $valeur;
+    /*propriété; valeur*/
+    /*ex:@include fontcolor(color ou background, green(la valeur)*/
+}
+
+@mixin imgheader{
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flexcenter100{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+@mixin flex80{
+    @include flexcenter;
+    width: 80%;
+}
+
+@mixin absolute($x: 50%, $y: 50%){
+    position: absolute;
+    left: $x;
+    top: $y;
+    transform: translate(-$x, -$y);
+}
+/*position absolue en 50-50 sur axe X et Y
+@include absolute pas besoin de paranthèse (valuer deja connu)*/
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);    
+}
+
+@mixin button-style {
+    opacity: 1;
+    background: $linegrad;
+    color: $vert;
+    padding: 0 20px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
+}
+@mixin positionO{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+@mixin position10 {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+@mixin position25{
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+}
+@mixin column{
+    flex-flow: column nowrap;
+}
+@mixin border7{
+    border-radius: 50%;
+    border: 7px solid transparent;
 }

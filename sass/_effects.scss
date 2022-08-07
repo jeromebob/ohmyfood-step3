@@ -1,0 +1,37 @@
+@keyframes spin{
+    0%{
+        transform: rotate(Odeg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes flash{
+    0%{
+        box-shadow: 0 0 30px $vert;
+        background-color: $violet;
+        
+    }
+    30%{
+        box-shadow: none;
+        
+    }
+    60%{
+        box-shadow: 0 0 40px $saumon; 
+        background-color: $vert;
+       
+    }
+    90%{
+        box-shadow: none;
+        
+    }
+    100%{
+        box-shadow: 0 0 30px $violet;
+        background-color: $rose;
+        
+    }
+}
+.fondu-loader{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
