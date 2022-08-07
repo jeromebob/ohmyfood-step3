@@ -1,5 +1,5 @@
 /*selection du loader via docqueryselector*/
-const loader = document.querySelector('loader');
+const loader = document.querySelector('loader-box');
 /*Quand tu auras chargé tout le site (load)*/
 window.addEventListener('load', () =>
     /*tu rajoute à .loader la class fondu-loader*/
