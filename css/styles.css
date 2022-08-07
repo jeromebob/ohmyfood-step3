@@ -30,11 +30,6 @@
     background-color: #FF79DA;
   }
 }
-.fondu-loader {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -67,7 +62,6 @@
     height: 100%;
     background: #333;
     border-radius: 10px;
-    z-index: 1;
   }
   .loader {
     display: block;
@@ -115,6 +109,10 @@
     border-radius: 50%;
     z-index: 2;
     animation: flash 3s cubic-bezier(0.57, 0, 0.5, 0.99) infinite;
+  }
+  .fondu-loader {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
   }
 }
 
