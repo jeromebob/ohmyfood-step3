@@ -22,55 +22,74 @@
     #box-logo, .header{
         @extend .body;
     }
-    .loader-box{
+    .loaderbox{
         @include flexcenter;
         @include positionO;
-        position: absolute;
+        @include fondu;
+        @include zindex;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background: #333;
-        border-radius: 10px;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
     }
     .loader{
         display: block;
-        position: relative;
         width: 250px;
         height: 250px;
         @include border7;
+        @include zindex;
         animation: spin 2s linear infinite;
         border-top-color: $vert;
     }
     .loader::before, .loader::after{
         content: "";
-        position: absolute;
         @include border7;
+        @include zindex;
     }
     .loader::before{
         @include position10;
+        @include zindex;
         border-top-color: $rose;
         animation: spin 3s linear infinite;
     }
     .loader::after{
         @include position25;
+        @include zindex;
         border-top-color: $violet;
         animation: spin 1.5s linear infinite;
     }
     .dot{
         @include flexcenter;
-        position: fixed;
-        top: 105px;
-        right: 105px;
-        bottom: 105px;
-        left: 105px;
-        width: 25px;
-        height: 25px;
+        @include zindex;
+        position: absolute;
+        top: 75px;
+        right: 75px;
+        bottom: 75px;
+        left: 75px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
-        z-index: 2;
-        animation: flash 3s cubic-bezier(.57,0,.5,.99) infinite;
+        animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
     }
-    .fondu-loader{
-        opacity: 0;
-        transition: opacity 0.4s ease-out;
+    .dottxt1{
+        @include fondu;
+        animation-delay: 500ms ;
+        @include infinteback;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .dottxt2{
+        @include fondu;
+        animation-delay: 1s;
+        @include infinteback;
+    }
+    .dottxt3{
+        @include fondu;
+        animation-delay: 2s;
+        @include infinteback;
+        font-weight: bold;
+        font-size: 20px;
     }
 }
 

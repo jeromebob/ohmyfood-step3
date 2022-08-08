@@ -77,3 +77,15 @@
     border-radius: 50%;
     border: 7px solid transparent;
 }
+@mixin fondu {
+   animation: disappear 4s 5s ease-out ;
+   animation-iteration-count: 1;
+}
+@mixin zindex{
+    position: absolute;
+    z-index: 20;
+}
+@mixin infinteback{
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
