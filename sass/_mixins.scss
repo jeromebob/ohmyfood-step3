@@ -78,10 +78,10 @@
     border: 7px solid transparent;
 }
 @mixin fondu {
-   animation: disappear 4s 5s ease-in-out ;
+   animation: disappear 1.5s ease-in-out ;
 }
 @mixin fondu_dot {
-    animation: disappear_dot 3s linear;
+    animation: disappear_dot 1.5s linear;
  }
 @mixin zindex{
     position: absolute;
