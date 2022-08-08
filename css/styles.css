@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /*MIXINS*/
+/*MIXIN AJUST FLEX*/
 /*position absolue en 50-50 sur axe X et Y
 @include absolute pas besoin de paranthèse (valuer deja connu)*/
+/*POSITION*/
+/*MARGIN*/
 /*.loaderbox{
     @if $var == 'fondu'{
     opacity: O;
@@ -70,19 +73,19 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 768px) {
-  .body, #box-logo, .header, .present {
+  /*BODY*/
+  #body, .box-logo, .header, .present, #section-geoloc, .geoloc .resto, .geoloc .resto__h2,
+.fonctionmt, #tssections {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    flex-flow: column nowrap;
-  }
-  /*HEADER*/
-  .imgheader {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
   }
   /*LOADER*/
   .loaderbox {
@@ -125,8 +128,6 @@
     left: 10px;
     right: 10px;
     bottom: 10px;
-    position: absolute;
-    z-index: 20;
     border-top-color: #FF79DA;
     animation: spin 3s linear infinite;
   }
@@ -135,8 +136,6 @@
     left: 25px;
     right: 25px;
     bottom: 25px;
-    position: absolute;
-    z-index: 20;
     border-top-color: #9356DC;
     animation: spin 1.5s linear infinite;
   }
@@ -179,21 +178,90 @@
     animation-delay: 3s;
     color: #FF79DA;
   }
-  /*menu géoloc*/
+  /*HEADER*/
+  .box-logo {
+    margin: 10px 0px 10px 0px;
+  }
+  .box-logo__img {
+    width: 62%;
+    height: 60px;
+  }
+  /*SECTION GEOLOC*/
   .geoloc {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 70%;
-    margin-top: 10px;
+    width: 48%;
   }
   .geoloc__icone {
     font-size: 20px;
+    width: 20%;
   }
   .geoloc__txt {
     border: none;
-    font-size: 18px;
+    font-size: 20px;
+    width: 80%;
   }
+  .present {
+    width: 60%;
+    margin: 30px 0 30px 0px;
+  }
+  .present__h1 {
+    letter-spacing: 2px;
+    margin: 10px 0 5px 0px;
+    text-align: center;
+  }
+  .present__p {
+    letter-spacing: 1px;
+    margin: 5px 0 10px 0px;
+    text-align: center;
+  }
+  .present__btnexploresto {
+    border-style: none;
+    width: 180px;
+    height: 45px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .present__a {
+    color: #ffffff;
+  }
+  /*SECTION FONCTIONNEMENT*/
+  /*SECTION RESTAURANTS*/
+  .resto, .resto__h2 {
+    margin: 10px 0px 10px 0px;
+  }
+  .resto__cards {
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 20px;
+    margin: 20px 0px 20px 0px;
+  }
+  .resto__a {
+    color: #1e1e1e;
+  }
+  .resto__imgresto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    width: 425px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .resto__txtcards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  /*FOOTER*/
 }
 
 /*# sourceMappingURL=styles.css.map */

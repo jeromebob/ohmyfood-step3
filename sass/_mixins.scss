@@ -5,27 +5,46 @@
     /*ex:@include fontcolor(color ou background, green(la valeur)*/
 }
 
-@mixin imgheader{
-    width: 300px;
-    height: 400px;
+@mixin imgresto{
+    width: 425px;
+    height: 200px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-
+/*MIXIN AJUST FLEX*/
 @mixin flexcenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 @mixin flexcenter100{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+@mixin columncenter100{
+    @include flexcenter;
+    flex-direction: column;
+    width: 100%;
+}
+@mixin columnaround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
 @mixin flex80{
     @include flexcenter;
     width: 80%;
+}
+@mixin spacearound100{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
 @mixin absolute($x: 50%, $y: 50%){
@@ -52,6 +71,7 @@
     border-radius: 200px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);  
 }
+/*POSITION*/
 @mixin positionO{
     top: 0;
     left: 0;
@@ -70,8 +90,12 @@
     right: 25px;
     bottom: 25px;
 }
-@mixin column{
-    flex-flow: column nowrap;
+/*MARGIN*/
+@mixin margin10TB{
+    margin: 10px 0px 10px 0px;
+}
+@mixin margin20TB{
+    margin: 20px 0px 20px 0px;
 }
 @mixin border7{
     border-radius: 50%;

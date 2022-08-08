@@ -10,18 +10,17 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+}
 @media screen and (max-width: 768px){
-
-    .body{
-        @include flexcenter100;
-        @include column;
+    /*BODY*/
+    #body{
+        @include columnaround;
     }
-    /*HEADER*/
-    .imgheader{
-        @include imgheader;
-    }
-    #box-logo, .header, .present{
-        @extend .body;
+    .box-logo, .header, .present, #section-geoloc, .geoloc
+    .resto, .fonctionmt, #tssections{
+        @extend #body;
     }
     /*LOADER*/
     .loaderbox{
@@ -51,13 +50,11 @@
     }
     .loader::before{
         @include position10;
-        @include zindex;
         border-top-color: $rose;
         animation: spin 3s linear infinite;
     }
     .loader::after{
         @include position25;
-        @include zindex;
         border-top-color: $violet;
         animation: spin 1.5s linear infinite;
     }
@@ -92,20 +89,87 @@
         animation-delay: 3s;
         color: $rose;
     }
-    /*menu géoloc*/
+    /*HEADER*/
+    .box-logo{
+        margin: 10px 0px 10px 0px;
+        &__img{
+            width: 62%;
+            height: 60px;
+        }
+    }
+
+    /*SECTION GEOLOC*/
     .geoloc{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-        width: 70%;
-        margin-top: 10px;
+        width: 48%;
         &__icone{
             font-size: 20px;
+            width: 20%;
         }
         &__txt{
             border: none;
-            font-size: 18px;
+            font-size: 20px;
+            width: 80%
         }
     }
+    .present{
+        width: 60%;
+        margin: 30px 0 30px 0px;
+        &__h1{
+            letter-spacing: 2px;
+            margin: 10px 0 5px 0px;
+            text-align: center;
+        }
+        &__p{
+            letter-spacing: 1px;
+            margin: 5px 0 10px 0px;
+            text-align: center;
+        }
+        &__btnexploresto{
+            border-style: none;
+            width: 180px;
+            height: 45px;
+            border-radius: 30px;
+            background: $linear-rosev;
+            color: $blanc;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        &__a{
+            color: $blanc
+        }
+    }
+    .fonctionmt{
+       
+    }
+    /*SECTION FONCTIONNEMENT*/
+
+    /*SECTION RESTAURANTS*/
+    .resto{
+        @include margin10TB;
+        &__h2{
+            @extend .resto;
+        }
+        &__cards{
+            background-color: $blanc;
+            box-shadow: 2px 2px 5px grey;
+            border-radius: 20px;
+            @include margin20TB;
+        }
+        &__a{
+            color: $noir;
+        }
+        &__imgresto{
+            @include flexcenter100;
+            @include imgresto;
+        }
+        &__txtcards{
+            @include spacearound100;
+            margin-top: 10px;
+        }
+    }
+    /*FOOTER*/
 }
 
