@@ -20,23 +20,23 @@
 }
 @keyframes flash {
   0% {
-    box-shadow: 0 0 40px #99E2D0;
+    box-shadow: 0 0 60px #99E2D0;
     animation-timing-function: 80ms;
   }
   30% {
-    box-shadow: none;
+    box-shadow: 0 0 60px #FA8072;
     animation-timing-function: 40ms;
   }
   60% {
-    box-shadow: 0 0 40px #FA8072;
+    box-shadow: 0 0 60px #99E2D0;
     animation-timing-function: 80ms;
   }
   90% {
-    box-shadow: none;
+    box-shadow: 0 0 60px #FF79DA;
     animation-timing-function: 40ms;
   }
   100% {
-    box-shadow: 0 0 40px #9356DC;
+    box-shadow: 0 0 60px #9356DC;
     animation-timing-function: 80ms;
   }
 }
@@ -53,12 +53,30 @@
   60% {
     opacity: 0.4;
   }
-  90% {
-    opacity: 0.2;
+  80% {
+    opacity: 0.3;
   }
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes disappear_dot {
+  0% {
+    opacity: 0.9;
+    animation-timing-function: 30ms;
+  }
+  50% {
+    opacity: 0.5;
+    animation-timing-function: 60ms;
+  }
+  80% {
+    opacity: 0.2;
+    animation-timing-function: 80ms;
+  }
+  100% {
+    opacity: 0;
+    animation-timing-function: 100ms;
   }
 }
 *, ::before, ::after {
@@ -75,11 +93,13 @@
     width: 100%;
     flex-flow: column nowrap;
   }
+  /*HEADER*/
   .imgheader {
     width: 300px;
     height: 400px;
     object-fit: cover;
   }
+  /*LOADER*/
   .loaderbox {
     display: flex;
     justify-content: center;
@@ -88,15 +108,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    animation: disappear 4s 5s ease-out;
-    animation-iteration-count: 1;
+    animation: disappear 4s 5s ease-in-out;
     position: absolute;
     z-index: 20;
     width: 100%;
     height: 100vh;
-    background: #333;
+    background: #ffffff;
     animation-fill-mode: forwards;
-    animation-delay: 300s;
+    animation-delay: 3.5s;
   }
   .loader {
     display: block;
@@ -142,56 +161,54 @@
     align-items: center;
     position: absolute;
     z-index: 20;
-    top: 75px;
-    right: 75px;
-    bottom: 75px;
-    left: 75px;
-    width: 90px;
-    height: 90px;
+    top: 45px;
+    right: 45px;
+    bottom: 45Spx;
+    left: 45px;
+    width: 145px;
+    height: 145px;
     border-radius: 50%;
     animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(9, 9, 121) 30%, rgb(147, 86, 220) 100%);
   }
-  .dottxt1 {
+  .dottxt1, .dottxt2, .dottxt3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: disappear 4s 5s ease-out;
-    animation-iteration-count: 1;
-    animation-delay: 500ms;
+    animation: disappear_dot 3s linear;
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
     animation-duration: 3s;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
+  }
+  .dottxt1 {
+    animation-delay: 500ms;
     color: #99E2D0;
   }
   .dottxt2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: disappear 4s 5s ease-out;
-    animation-iteration-count: 1;
     color: #9356DC;
     animation-delay: 1.5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-duration: 3s;
-    font-weight: bold;
-    font-size: 20px;
   }
   .dottxt3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: disappear 4s 5s ease-out;
-    animation-iteration-count: 1;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-duration: 3s;
-    font-weight: bold;
-    font-size: 20px;
-    animation-delay: 3Ss;
+    animation-delay: 3s;
     color: #FF79DA;
+  }
+  .geoloc {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .geoloc__icone {
+    display: flex;
+    align-items: center;
+  }
+  .geoloc__txt {
+    display: flex;
+    align-items: center;
+    border: none;
   }
 }
 

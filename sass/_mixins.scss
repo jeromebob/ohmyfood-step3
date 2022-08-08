@@ -78,9 +78,11 @@
     border: 7px solid transparent;
 }
 @mixin fondu {
-   animation: disappear 4s 5s ease-out ;
-   animation-iteration-count: 1;
+   animation: disappear 4s 5s ease-in-out ;
 }
+@mixin fondu_dot {
+    animation: disappear_dot 3s linear;
+ }
 @mixin zindex{
     position: absolute;
     z-index: 20;
@@ -90,5 +92,5 @@
     animation-fill-mode: backwards;
     animation-duration:  3s;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
 }

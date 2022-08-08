@@ -8,25 +8,24 @@
 }
 @keyframes flash{
     0%{
-        box-shadow: 0 0 40px $vert;
+        box-shadow: 0 0 60px $vert;
         animation-timing-function: 80ms;
-        
     }
     30%{
-        box-shadow: none;
+        box-shadow: 0 0 60px $saumon;
         animation-timing-function: 40ms;
         
     }
     60%{
-        box-shadow: 0 0 40px $saumon; 
+        box-shadow: 0 0 60px $vert; 
         animation-timing-function: 80ms;
     }
     90%{
-        box-shadow: none;
+        box-shadow: 0 0 60px $rose; 
          animation-timing-function: 40ms;
     }
     100%{
-        box-shadow: 0 0 40px $violet;
+        box-shadow: 0 0 60px $violet;
         animation-timing-function: 80ms;
     }
 }
@@ -44,11 +43,30 @@
     60%{
         opacity: 0.4;
     }
-    90%{
-        opacity: 0.2;
+    80%{
+        opacity: 0.3;
     }
     100%{
         opacity: 0;
         visibility: hidden;
+    }
+}
+@keyframes disappear_dot {
+    0%{
+        opacity: 0.9;
+        animation-timing-function: 30ms;
+    }
+    50%{
+        opacity: 0.5;
+        animation-timing-function: 60ms;
+    }
+    80%{
+        opacity: 0.2;
+        animation-timing-function: 80ms;
+
+    }
+    100%{
+        opacity: 0;
+        animation-timing-function: 100ms;
     }
 }

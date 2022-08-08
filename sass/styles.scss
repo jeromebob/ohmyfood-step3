@@ -16,12 +16,14 @@
         @include flexcenter100;
         @include column;
     }
+    /*HEADER*/
     .imgheader{
         @include imgheader;
     }
     #box-logo, .header{
         @extend .body;
     }
+    /*LOADER*/
     .loaderbox{
         @include flexcenter;
         @include positionO;
@@ -29,9 +31,9 @@
         @include zindex;
         width: 100%;
         height: 100vh;
-        background: #333;
+        background: $blanc;
         animation-fill-mode: forwards;
-        animation-delay: 300s;
+        animation-delay: 3.5s;
     }
     .loader{
         display: block;
@@ -62,37 +64,51 @@
     .dot{
         @include flexcenter;
         @include zindex;
-        top: 75px;
-        right: 75px;
-        bottom: 75px;
-        left: 75px;
-        width: 90px;
-        height: 90px;
+        top: 45px;
+        right: 45px;
+        bottom: 45Spx;
+        left: 45px;
+        width: 145px;
+        height: 145px;
         border-radius: 50%;
         animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
+        background: $linearg;
+    }
+    .dottxt1, .dottxt2, .dottxt3{
+        @include flexcenter;
+        @include fondu_dot;
+        @include infinteback;
     }
     .dottxt1{
-        @include flexcenter;
-        @include fondu;
         animation-delay: 500ms ;
-        @include infinteback;
         color: $vert;
         
     }
     .dottxt2{
-        @include flexcenter;
-        @include fondu;
         color: $violet;
         animation-delay: 1.5s;
-        @include infinteback;
     }    
     .dottxt3{
-        @include flexcenter;
-        @include fondu;
-        @include infinteback;
-        animation-delay: 3Ss;
+        animation-delay: 3s;
         color: $rose;
     }
+    .geoloc{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        margin-top: 10px;
+        &__icone{
+            display: flex;
+            align-items: center;
+        }
+        &__txt{
+            display: flex;
+            align-items: center;
+            border: none;
+        }
+    }
+
 }
 
 
