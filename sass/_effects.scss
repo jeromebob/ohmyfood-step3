@@ -43,13 +43,13 @@
 }
 @keyframes disappear_dot {
     0%{
-        opacity: 0.9;
+        opacity: 1;
     }
-    50%{
-        opacity: 0.5;
+    40%{
+        opacity: 0;
     }
     80%{
-        opacity: 0.2;
+        opacity: 1;
 
     }
     100%{
