@@ -88,4 +88,7 @@
 @mixin infinteback{
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
+    animation-duration:  3s;
+    font-weight: bold;
+    font-size: 20px;
 }

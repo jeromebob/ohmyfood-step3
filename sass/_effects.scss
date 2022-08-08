@@ -9,30 +9,25 @@
 @keyframes flash{
     0%{
         box-shadow: 0 0 40px $vert;
-        background-color: $violet;
-        animation-timing-function: 100ms;
+        animation-timing-function: 80ms;
         
     }
     30%{
         box-shadow: none;
-        animation-timing-function: 50ms;
+        animation-timing-function: 40ms;
         
     }
     60%{
         box-shadow: 0 0 40px $saumon; 
-        background-color: $vert;
-        animation-timing-function: 100ms;
-       
+        animation-timing-function: 80ms;
     }
     90%{
         box-shadow: none;
-        animation-timing-function: 50ms;
-        
+         animation-timing-function: 40ms;
     }
     100%{
         box-shadow: 0 0 40px $violet;
-        background-color: $rose;
-        animation-timing-function: 100ms;
+        animation-timing-function: 80ms;
     }
 }
 
@@ -40,8 +35,17 @@
     0%{
         opacity: 0.9;
     }
-    30%{
-        opacity: 0.5;
+    20%{
+        opacity: 0.7;
+    }
+    40%{
+        opacity: 0.6;
+    }
+    60%{
+        opacity: 0.4;
+    }
+    90%{
+        opacity: 0.2;
     }
     100%{
         opacity: 0;

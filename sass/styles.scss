@@ -31,7 +31,7 @@
         height: 100vh;
         background: #333;
         animation-fill-mode: forwards;
-        animation-delay: 4s;
+        animation-delay: 300s;
     }
     .loader{
         display: block;
@@ -62,7 +62,6 @@
     .dot{
         @include flexcenter;
         @include zindex;
-        position: absolute;
         top: 75px;
         right: 75px;
         bottom: 75px;
@@ -73,23 +72,27 @@
         animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
     }
     .dottxt1{
+        @include flexcenter;
         @include fondu;
         animation-delay: 500ms ;
         @include infinteback;
-        font-weight: bold;
-        font-size: 20px;
+        color: $vert;
+        
     }
     .dottxt2{
+        @include flexcenter;
         @include fondu;
-        animation-delay: 1s;
+        color: $violet;
+        animation-delay: 1.5s;
         @include infinteback;
-    }
+    }    
     .dottxt3{
+        @include flexcenter;
         @include fondu;
-        animation-delay: 2s;
         @include infinteback;
-        font-weight: bold;
-        font-size: 20px;
+        animation-delay: 3Ss;
+        color: $rose;
     }
 }
+
 
