@@ -141,10 +141,46 @@ a{
             color: $blanc
         }
     }
+     /*SECTION FONCTIONNEMENT*/
     .fonctionmt{
-       
+        width: 95%;
+    &__h1{
+        margin-top: 10px;
+        width: 90%;
     }
-    /*SECTION FONCTIONNEMENT*/
+    &__divbox{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    &__nb{
+        @include flexcenter;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 24px;
+        background: $violet;
+        color: $blanc;
+        position: absolute;
+        transform: translateX(-510%);
+        z-index: 1;
+    } 
+    &__div{
+        @include margin20TB;
+        color: $noir;
+        height: 80px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
+    }
+    &__i{
+        font-size: xx-large;
+    }
+    &__div:hover{
+        color: $violet;
+    }  
+    }
 
     /*SECTION RESTAURANTS*/
     .resto{
@@ -168,6 +204,9 @@ a{
         &__txtcards{
             @include spacearound100;
             margin-top: 10px;
+        }
+        &__i{
+            color: $linear-violetr;
         }
     }
     /*FOOTER*/

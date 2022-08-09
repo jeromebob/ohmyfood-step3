@@ -3,8 +3,11 @@
 /*MIXIN AJUST FLEX*/
 /*position absolue en 50-50 sur axe X et Y
 @include absolute pas besoin de paranthèse (valuer deja connu)*/
+/*BUTTONS*/
 /*POSITION*/
 /*MARGIN*/
+/*BORDER*/
+/*ANIMATIONS*/
 /*.loaderbox{
     @if $var == 'fondu'{
     opacity: O;
@@ -230,6 +233,47 @@ a {
     color: #ffffff;
   }
   /*SECTION FONCTIONNEMENT*/
+  .fonctionmt {
+    width: 95%;
+  }
+  .fonctionmt__h1 {
+    margin-top: 10px;
+    width: 90%;
+  }
+  .fonctionmt__divbox {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .fonctionmt__nb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    background: #9356DC;
+    color: #ffffff;
+    position: absolute;
+    transform: translateX(-510%);
+    z-index: 1;
+  }
+  .fonctionmt__div {
+    margin: 20px 0px 20px 0px;
+    color: #1e1e1e;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  }
+  .fonctionmt__i {
+    font-size: xx-large;
+  }
+  .fonctionmt__div:hover {
+    color: #9356DC;
+  }
   /*SECTION RESTAURANTS*/
   .resto, .resto__h2 {
     margin: 10px 0px 10px 0px;
@@ -260,6 +304,9 @@ a {
     align-items: center;
     width: 100%;
     margin-top: 10px;
+  }
+  .resto__i {
+    color: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   }
   /*FOOTER*/
 }

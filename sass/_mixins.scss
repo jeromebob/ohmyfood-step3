@@ -46,7 +46,12 @@
     align-items: center;
     width: 100%;
 }
-
+@mixin flexrow100{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
 @mixin absolute($x: 50%, $y: 50%){
     position: absolute;
     left: $x;
@@ -55,7 +60,7 @@
 }
 /*position absolue en 50-50 sur axe X et Y
 @include absolute pas besoin de paranthèse (valuer deja connu)*/
-
+/*BUTTONS*/
 @mixin button-hover {
     opacity: 0.8;
     cursor: pointer;
@@ -90,6 +95,10 @@
     right: 25px;
     bottom: 25px;
 }
+@mixin zindex{
+    position: absolute;
+    z-index: 20;
+}
 /*MARGIN*/
 @mixin margin10TB{
     margin: 10px 0px 10px 0px;
@@ -97,20 +106,18 @@
 @mixin margin20TB{
     margin: 20px 0px 20px 0px;
 }
+/*BORDER*/
 @mixin border7{
     border-radius: 50%;
     border: 7px solid transparent;
 }
+/*ANIMATIONS*/
 @mixin fondu {
    animation: disappear 1.5s ease-in-out ;
 }
 @mixin fondu_dot {
     animation: disappear_dot 1.5s linear;
  }
-@mixin zindex{
-    position: absolute;
-    z-index: 20;
-}
 @mixin infinteback{
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
