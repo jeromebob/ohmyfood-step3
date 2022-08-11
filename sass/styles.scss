@@ -143,54 +143,54 @@ a{
     }
      /*SECTION FONCTIONNEMENT*/
     .fonctionmt{
-        width: 95%;
-    &__h1{
-        margin-top: 10px;
-        width: 90%;
+            width: 95%;
+        &__h1{
+            margin-top: 10px;
+            width: 90%;
+        }
+        &__divbox{
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        &__nb{
+            @include flexcenter;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            background: $violet;
+            color: $blanc;
+            position: absolute;
+            left: 7%;
+            transform: translate(-50%, -6%);
+            z-index: 1;
+        } 
+        &__div{
+            @include margin20TB;
+            color: $noir;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
+        }
+        &__div:hover{
+            background-color: lighten($violet, 35%);
+        }
+        &__i{
+            font-size: xx-large;
+        }
     }
-    &__divbox{
-        width: 90%;
-        margin-bottom: 10px;
-    }
-    &__nb{
-        @include flexcenter;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        font-size: 24px;
-        background: $violet;
-        color: $blanc;
-        position: absolute;
-        left: 7%;
-        transform: translate(-50%, -6%);
-        z-index: 1;
-    } 
-    &__div{
-        @include margin20TB;
-        color: $noir;
-        height: 80px;
-        border-radius: 20px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
-    }
-    &__i{
-        font-size: xx-large;
-    }
-    &__div:hover{
-        color: $violet;
-    }  
-    }
-
     /*SECTION RESTAURANTS*/
     .resto{
+        @include columncenter100;
         @include margin10TB;
-        width: 95%;;
         &__h2{
             @extend .resto;
         }
         &__cards{
+            width: 90%;
             background-color: $blanc;
             box-shadow: 2px 2px 5px grey;
             border-radius: 20px;
@@ -204,13 +204,20 @@ a{
             @include imgresto;
         }
         &__txtcards{
-            @include spacearound100;
-            margin-top: 10px;
+            @include spacebetween;
+            width: 100%;
+        }
+        &__boxtxt{
+            @include columncenter100;
+            height: 50px;
+            margin-left: 10px;
+            width: 30%;
         }
         &__i{
+            @include spacebetween;
             color: $linear-violetr;
+            width: 20%;
         }
     }
     /*FOOTER*/
 }
-
