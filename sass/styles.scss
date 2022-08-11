@@ -161,7 +161,8 @@ a{
         background: $violet;
         color: $blanc;
         position: absolute;
-        transform: translateX(-490%);
+        left: 7%;
+        transform: translate(-50%, -6%);
         z-index: 1;
     } 
     &__div{

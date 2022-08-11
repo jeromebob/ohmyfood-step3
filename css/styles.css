@@ -255,7 +255,8 @@ a {
     background: #9356DC;
     color: #ffffff;
     position: absolute;
-    transform: translateX(-490%);
+    left: 7%;
+    transform: translate(-50%, -6%);
     z-index: 1;
   }
   .fonctionmt__div {
