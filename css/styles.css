@@ -278,6 +278,7 @@ a {
   /*SECTION RESTAURANTS*/
   .resto, .resto__h2 {
     margin: 10px 0px 10px 0px;
+    width: 95%;
   }
   .resto__cards {
     background-color: #ffffff;

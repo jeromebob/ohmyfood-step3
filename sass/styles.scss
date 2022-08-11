@@ -186,6 +186,7 @@ a{
     /*SECTION RESTAURANTS*/
     .resto{
         @include margin10TB;
+        width: 95%;;
         &__h2{
             @extend .resto;
         }
