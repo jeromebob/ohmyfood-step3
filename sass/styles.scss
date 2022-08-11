@@ -195,7 +195,6 @@ a{
             box-shadow: 2px 2px 5px grey;
             border-radius: 20px;
             @include margin20TB;
-            @include absolute;
         }
         &__a{
             color: $noir;

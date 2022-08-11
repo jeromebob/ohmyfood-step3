@@ -285,10 +285,6 @@ a {
     box-shadow: 2px 2px 5px grey;
     border-radius: 20px;
     margin: 20px 0px 20px 0px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   .resto__a {
     color: #1e1e1e;
@@ -298,8 +294,8 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    width: 97%;
-    height: 70%;
+    width: 390px;
+    height: 200px;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
