@@ -80,7 +80,7 @@ a {
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   /*BODY*/
   #body, .box-logo, .header, .present, #section-geoloc, .geoloc .resto, .geoloc .resto__h2,
 .fonctionmt, #tssections {
