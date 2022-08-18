@@ -1,0 +1,113 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_buttons.scss";
+@import "_forms.scss";
+@import "effects.scss";
+
+*{
+    font-family: "roboto";
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: $noir;
+}
+/*BODY*/
+#body{
+    @include columnaround;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: $space10+10;
+        &__i{
+            @include flexcenter;
+            width: 5%;
+            font-size: x-large;
+        }
+        &__img{
+            @include flexcenter;
+            width: 95%;
+            margin-right: 10%;
+        }
+}
+.main__img{
+    width: 100%;
+    object-fit: cover;
+}
+.resto__txtcards{
+    @include textcards;
+}
+.box-menus{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    padding-left: $space10+10;
+    @include margin20TB;
+        &__h2{
+            padding-left: $space10;
+        }
+}
+.menu{
+    @include spacebetween;
+    background-color: $blanc;
+    @include box-menus;
+    overflow: hidden;
+        &:hover{
+            .menu__check{
+                margin-right: 0;
+            }
+            .fa-check-circle{
+                -webkit-animation: rotate-check 0.65s ease-in-out both;
+                animation: rotate-check 0.65s ease-in-out both;
+            }
+    }
+    &__div1{
+        width: 100%;
+        overflow: hidden;
+            h3, p{
+                @include texthidden
+            }
+            &__h3{
+                padding-left: $space10;
+            }
+            &__p{
+                font-size: 16px;
+                padding-left: $space10;
+            }
+    }
+    &__price{
+        width: 5em;
+        font-weight: bold;
+        margin-left: $space10;
+        font-size: 20px;
+    }
+    &__check{
+        @include flexcenter;
+        background-color: $vert;
+        color: $blanc;
+        width: 20%;
+        font-size: x-large;
+        border-radius: 0 20px 20px 0;
+        height: 70px;
+        margin-right: -5em;  
+        flex-shrink: 0; 
+    }
+}
+
+.section-command{
+    @include flexcenter100;
+    @include margin20TB;
+    text-decoration: none;
+}
+/*FOOTER*/
+.footer{
+    @include footer;
+}

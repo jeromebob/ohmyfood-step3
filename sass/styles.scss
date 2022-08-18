@@ -5,105 +5,50 @@
 @import "_forms.scss";
 @import "effects.scss";
 
+*{
+    font-family: "roboto";
+}
 *, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-a{
+a {
     text-decoration: none;
 }
-@media screen and (min-width: 320px) and (max-width: 768px){
-    /*BODY*/
-    #body{
-        @include columnaround;
-    }
-    .box-logo, .header, .present, #section-geoloc, .geoloc
-    .resto, .fonctionmt, #tssections{
-        @extend #body;
-    }
-    /*LOADER*/
-    .loaderbox{
-        @include flexcenter;
-        @include positionO;
-        @include fondu;
-        @include zindex;
-        width: 100%;
-        height: 100vh;
-        background: $noir;
-        animation-fill-mode: forwards;
-        animation-delay: 3s;
-    }
-    .loader{
-        display: block;
-        width: 250px;
-        height: 250px;
-        @include border7;
-        @include zindex;
-        animation: spin 2s linear infinite;
-        border-top-color: $vert;
-    }
-    .loader::before, .loader::after{
-        content: "";
-        @include border7;
-        @include zindex;
-    }
-    .loader::before{
-        @include position10;
-        border-top-color: $rose;
-        animation: spin 3s linear infinite;
-    }
-    .loader::after{
-        @include position25;
-        border-top-color: $violet;
-        animation: spin 1.5s linear infinite;
-    }
-    .dot{
-        @include flexcenter;
-        @include zindex;
-        top: 45px;
-        right: 45px;
-        bottom: 45Spx;
-        left: 45px;
-        width: 145px;
-        height: 145px;
-        border-radius: 50%;
-        animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
-        background: $linearg;
-    }
-    .dottxt1, .dottxt2, .dottxt3{
-        @include flexcenter;
-        @include fondu_dot;
-        @include infinteback;
-    }
-    .dottxt1{
-        animation-delay: 500ms ;
-        color: $vert;
-        
-    }
-    .dottxt2{
-        color: $violet;
-        animation-delay: 1.5s;
-    }    
-    .dottxt3{
-        animation-delay: 3s;
-        color: $rose;
-    }
-    /*HEADER*/
-    .box-logo{
-        margin: 10px 0px 10px 0px;
-        &__img{
-            width: 62%;
-            height: 60px;
+/*BODY*/
+#body{
+    @include columnaround;
+}
+.box-logo, .header, .present, #section-geoloc, .geoloc
+.resto, .fonctionmt, #tssections {
+    @extend #body;
+}
+/*LOADER*/
+.loaderbox{
+    @include loaderbox;
+}
+.loader{
+    @include loader;
+}
+/*HEADER*/
+.box-logo{
+    margin: 10px 0px 10px 0px;
+        &__div{
+            @include flexcenter100;
+            padding: 10px 0 10px 0;
+                &__img{
+                    margin-top: 0;
+                    @extend .box-logo__div;
+                    width: 50%;
+                }
         }
-    }
-
-    /*SECTION GEOLOC*/
-    .geoloc{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 48%;
+}
+/*SECTION GEOLOC*/
+.geoloc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
         &__icone{
             font-size: 20px;
             width: 20%;
@@ -113,44 +58,70 @@ a{
             font-size: 20px;
             width: 80%
         }
-    }
-    .present{
-        width: 60%;
-        margin: 30px 0 30px 0px;
+}
+.present{
+    @include flexcenter100;
+    margin: 30px 0 30px 0px;
         &__h1{
-            letter-spacing: 2px;
+            font-weight: 800;
+            width: 60%;
+            letter-spacing: 1px;
             margin: 10px 0 5px 0px;
             text-align: center;
         }
         &__p{
-            letter-spacing: 1px;
-            margin: 5px 0 10px 0px;
-            text-align: center;
+            @extend .present__h1;
+            font-weight: normal;
+            width: 80%;
         }
         &__btnexploresto{
+            @include margin20TB;
             border-style: none;
-            width: 180px;
-            height: 45px;
-            border-radius: 30px;
+            width: 60%;
+            height: 60px;
+            border-radius: 20px;
             background: $linear-rosev;
             color: $blanc;
-            font-size: 14px;
-            font-weight: bold;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+                &:hover{
+                    @include buttonhov;
+                }
         }
         &__a{
             color: $blanc
         }
     }
-     /*SECTION FONCTIONNEMENT*/
-    .fonctionmt{
-            width: 95%;
+/*SECTION FONCTIONNEMENT*/
+.fonctionmt{
+    width: 95%;
         &__h1{
-            margin-top: 10px;
-            width: 90%;
+                width: 90%;
         }
         &__divbox{
             width: 90%;
             margin-bottom: 10px;
+        }
+        &__div{
+            @include margin20TB;
+            color: $noir;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
+                &:hover{
+                    background-color: lighten($violet, 35%);
+                    color: $violet;
+                    .fonctionmt__h3{
+                        color: $noir;
+                    }
+                }
+        }
+        &__i{
+            font-size: xx-large;
         }
         &__nb{
             @include flexcenter;
@@ -164,28 +135,12 @@ a{
             left: 7%;
             transform: translate(-50%, -6%);
             z-index: 1;
-        } 
-        &__div{
-            @include margin20TB;
-            color: $noir;
-            height: 80px;
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
         }
-        &__div:hover{
-            background-color: lighten($violet, 35%);
-        }
-        &__i{
-            font-size: xx-large;
-        }
-    }
-    /*SECTION RESTAURANTS*/
-    .resto{
-        @include columncenter100;
-        @include margin10TB;
+}
+/*SECTION RESTAURANTS*/
+.resto{
+    @include columncenter100;
+    @include margin10TB;
         &__h2{
             @extend .resto;
         }
@@ -204,20 +159,24 @@ a{
             @include imgresto;
         }
         &__txtcards{
-            @include spacebetween;
-            width: 100%;
+            @include textcards;
         }
-        &__boxtxt{
-            @include columncenter100;
-            height: 50px;
-            margin-left: 10px;
-            width: 30%;
-        }
-        &__i{
-            @include spacebetween;
-            color: $linear-violetr;
-            width: 20%;
-        }
-    }
-    /*FOOTER*/
+}
+.nouveau{
+    position: relative;
+}
+.nouveau::before{
+    content: "Nouveau";
+    position: absolute;
+    background-color: $vert;
+    color: darken($vert, 50%);
+    padding: 10px 20px 10px 20px;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+/*FOOTER*/
+.footer{
+    @include footer;
 }
