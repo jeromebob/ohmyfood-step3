@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A la française</title>
+    <title>À la française</title>
+    <link rel="stylesheet" href="../css/styles-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./font/shrikhand/Shrikhand-Regular.ttf">
+    <link rel="stylesheet" href="./font/Roboto/Roboto-Regular.ttf">
+    <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/shrikhand" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -15,103 +21,118 @@
             <img src="../img/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood" class="logo-site">
         </div> 
     </header>
-    <main class="ttes-sections">
+    <main class="main">
+        <img src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant la palette du goüt" class="main__img">
         <div class="resto__txtcards">
             <div class="resto__txtcards__boxtxt">
-                <h1>La palette du goût</h1>
+                <h1>À la française</h1>
             </div>
             <div class="resto__txtcards__i">
                 <i class="far fa-heart resto__txtcards__i"></i>
                 <i class="fas fa-heart resto__txtcards__i"></i>
             </div>
         </div>
-        <div>
-            <h1>À la française</h1>
-            <i class="fa-solid fa-heart"></i>
-        </div>
-        <section>
-            <h3>Entrées</h3>
-            <div>
-                <div>
-                    <h4>Tartare de poulpe acidulé</h4>
-                    <p>Aux zestes d'orange</p>
+        <section  class="box-menus">
+            <h2 class="box-menus__h2">Entrées</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Tartare de poulpe acidulé</h3>
+                    <p class="menu__div1__p">Aux zestes d'orange</p>
                 </div>
-                <p>25€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Velouté de légumes d'antan</h4>
-                    <p>Carotte, panais, topinambour</p>
+                <span class="menu__price">25€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <p>35€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Soupe à l'oignon</h4>
-                    <p>Revisitée</p>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Velouté de légumes d'antan</h3>
+                    <p class="menu__div1__p">Carotte, panais, topinambour</p>
                 </div>
-                <p>20€</p>
-                <button></button>
-            </div>
+                <span class="menu__price">35€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Soupe à l'oignon</h3>
+                    <p class="menu__div1__p">Revisitée</p>
+                </div>
+                <span class="menu__price">20€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
         </section>
-        <section>
-            <h3>Plats</h3>
-            <div>
-                <div>
-                    <h4>Coquilles Saint-Jacques</h4>
-                    <p>Accompagnées d'une purée de panais</p>
+        <section class="box-menus">
+            <h2 class="box-menus__h2">Plats</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Coquilles Saint-Jacques</h3>
+                    <p class="menu__div1__p">Accompagnées d'une purée de panais</p>
                 </div>
-                <p>40€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Magret de canard</h4>
-                    <p>Et parmentier de pommes de terre</p>
+                <span class="menu__price">40€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <p>35€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                    <p>Sur son lit de gnocchis aux légumes</p>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Magret de canard</h3>
+                    <p class="menu__div1__p">Et parmentier de pommes de terre</p>
                 </div>
-                <p>44€</p>
-                <button></button>
-            </div>
+                <span class="menu__price">35€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Pigeonneau d’Ille-et-Vilaine</h3>
+                    <p class="menu__div1__p">Sur son lit de gnocchis aux légumes</p>
+                </div>
+                <span class="menu__price">44€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </a>
         </section>
-        <section>
-            <h3>Desserts</h3>
-            <div>
-                <div>
-                    <h4>Pétales de violettes glacés</h4>
-                    <p>Et purée de noisettes</p>
+        <section class="box-menus">
+            <h2 class="box-menus__h2">Desserts</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Pétales de violettes glacés</h3>
+                    <p class="menu__div1__p">Et purée de noisettes</p>
                 </div>
-                <p>18€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Fondant au chocolat</h4>
-                    <p>Revisité</p>
+                <span class="menu__price">18€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Fondant au chocolat</h3>
+                    <p class="menu__div1__p">Revisité</p>
                 </div>
-                <p>22€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Millefeuille croustillant</h4>
-                    <p>Myrtilles et pâte d’amande</p>
+                <span class="menu__price">22€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <p>23€</p>
-                <button></button>
-            </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Millefeuille croustillant</h3>
+                    <p class="menu__div1__p">Myrtilles et pâte d’amande</p>
+                </div>
+                <span class="menu__price">23€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </a>
         </section>
-        <section>
-            <button><a href="#">Commander</a></button>
+        <section class="section-command">
+            <button class="section-command__btn"><a href="#">Commander</a></button>
         </section>
     </main>
     <footer class="footer">

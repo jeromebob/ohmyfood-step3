@@ -106,6 +106,15 @@ a {
     @include flexcenter100;
     @include margin20TB;
     text-decoration: none;
+        &__btn{
+            @include flexcenter100;
+            font-size: 20px;
+            @include btnexploresto;
+        &:hover{
+            color: $linear-violetr-lighter;
+        }   
+    }
+ 
 }
 /*FOOTER*/
 .footer{

@@ -75,16 +75,10 @@ a {
             width: 80%;
         }
         &__btnexploresto{
-            @include margin20TB;
-            border-style: none;
-            width: 60%;
-            height: 60px;
-            border-radius: 20px;
-            background: $linear-rosev;
-            color: $blanc;
-            font-size: 20px;
-            font-weight: 600;
-            cursor: pointer;
+            @include btnexploresto;
+                @media screen (max-width 768px){
+                    width: 60%;
+                }
                 &:hover{
                     @include buttonhov;
                 }

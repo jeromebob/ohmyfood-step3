@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Délice des sens</title>
+    <title>Le délice des sens</title>
+    <link rel="stylesheet" href="../css/styles-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./font/shrikhand/Shrikhand-Regular.ttf">
+    <link rel="stylesheet" href="./font/Roboto/Roboto-Regular.ttf">
+    <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/shrikhand" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -15,103 +21,118 @@
             <img src="../img/logo/ohmyfood@2x.svg" alt="logo du site ohmyfood" class="logo-site">
         </div> 
     </header>
-    <main class="ttes-sections">
+    <main class="main">
+        <img src="../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant la palette du goüt" class="main__img">
         <div class="resto__txtcards">
             <div class="resto__txtcards__boxtxt">
-                <h1>Délice des sens</h1>
+                <h1>Le délice des sens</h1>
             </div>
             <div class="resto__txtcards__i">
                 <i class="far fa-heart resto__txtcards__i"></i>
                 <i class="fas fa-heart resto__txtcards__i"></i>
             </div>
         </div>
-        <section class="entrees">
-            <h3>Entrées</h3>
-            <div class="menu">
-                <div class="menu_div1">
-                    <h4 class="menu_div1_h4">Tartare de thon</h4>
-                    <p class="menu_div1_p">Assaisonné au yuzu</p>
+        <section  class="box-menus">
+            <h2 class="box-menus__h2">Entrées</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Tartare de thon</h3>
+                    <p class="menu__div1__p">Assaisonné au yuzu</p>
                 </div>
-                <div class="menu_div2">
-                    <p class="menu_div2_price">25€</p>
+                <span class="menu__price">25€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="menu_check">
-                    <i class="fa-check-circle"></i></i>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Bouchée de homard croustillant</h3>
+                    <p class="menu__div1__p">Et sa farandole de petits légumes</p>
                 </div>
-            </div>
-            <div>
-                <div>
-                    <h4>Bouchée de homard croustillant</h4>
-                    <p>Et sa farandole de petits légumes</p>
+                <span class="menu__price">35€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Velouté de cèpes</h3>
+                    <p class="menu__div1__p">Aux truffes</p>
                 </div>
-                <p>35€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Velouté de cèpes</h4>
-                    <p>Aux truffes</p>
-                </div>
-                <p>20€</p>
-                <button></button>
-            </div>
+                <span class="menu__price">20€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
         </section>
-        <section>
-            <h3>Plats</h3>
-            <div>
-                <div>
-                    <h4>Poulet rôti aux herbes de Provence</h4>
-                    <p>Et sa crème de truffe</p>
+        <section class="box-menus">
+            <h2 class="box-menus__h2">Plats</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Poulet rôti aux herbes de Provence</h3>
+                    <p class="menu__div1__p">Et sa crème de truffe</p>
                 </div>
-                <p>40€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Langouste rôtie</h4>
-                    <p>Et ses légumes de saison</p>
+                <span class="menu__price">40€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <p>35€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Côte de boeuf Angus</h4>
-                    <p>Et sa purée de panais</p>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Langouste rôtie</h3>
+                    <p class="menu__div1__p">Et ses légumes de saison</p>
                 </div>
-                <p>44€</p>
-                <button></button>
-            </div>
+                <span class="menu__price">35€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Côte de boeuf Angus</h3>
+                    <p class="menu__div1__p">Et sa purée de panais</p>
+                </div>
+                <span class="menu__price">44€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </a>
         </section>
-        <section>
-            <h3>Desserts</h3>
-            <div>
-                <div>
-                    <h4>Farandole de desserts</h4>
-                    <p>Du chef</p>
+        <section class="box-menus">
+            <h2 class="box-menus__h2">Desserts</h2>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Farandole de desserts</h3>
+                    <p class="menu__div1__p">Du chef</p>
                 </div>
-                <p>18€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Crème brulée</h4>
-                    <p>Revisitée</p>
+                <span class="menu__price">18€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Crème brulée</h3>
+                    <p class="menu__div1__p">Revisitée</p>
                 </div>
-                <p>22€</p>
-                <button></button>
-            </div>
-            <div>
-                <div>
-                    <h4>Tiramisu</h4>
-                    <p>À la noisette</p>
+                <span class="menu__price">22€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <p>23€</p>
-                <button></button>
-            </div>
+            </a>
+            <a href="#" class="menu">
+                <div class="menu__div1">
+                    <h3 class="menu__div1__h3">Tiramisu</h3>
+                    <p class="menu__div1__p">À la noisette</p>
+                </div>
+                <span class="menu__price">23€</span>
+                <div class="menu__check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </a>
         </section>
-        <section>
-            <button><a href="#">Commander</a></button>
+        <section class="section-command">
+            <button class="section-command__btn"><a href="#">Commander</a></button>
         </section>
     </main>
     <footer class="footer">

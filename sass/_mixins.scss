@@ -220,6 +220,8 @@
     font-weight: bold;
     font-size: 28px;
 }
+/*RESTAURANTS*/
+
 @mixin textcards{
         @include spacebetween;
         margin: 0 20px 0 20px;
@@ -243,6 +245,18 @@
                 }
             }
 }
+@mixin btnexploresto{
+    @include margin20TB;
+    border-style: none;
+    height: 60px;
+    border-radius: 20px;
+    background: $linear-rosev;
+    color: $blanc;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/*FOOTER*/
 @mixin footer{
     @include flexstartcolumn;
     background: $noir;
@@ -294,3 +308,4 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
