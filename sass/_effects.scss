@@ -74,10 +74,6 @@
       -webkit-transform: rotateZ(0);
               transform: rotateZ(0);
     }
-    50% {
-      -webkit-transform: rotateZ(180deg);
-              transform: rotateZ(180deg);
-    }
     100% {
       -webkit-transform: rotateZ(360deg);
               transform: rotateZ(360deg);
@@ -88,12 +84,10 @@
     0%{
         
         opacity: 0;
-        visibility: hidden;
     }
     20%{
        
         opacity: 0.2;
-   
     }
     40%{
         opacity: 0.4;
@@ -107,6 +101,27 @@
     }
     100%{
         opacity: 1;
-        visibility: visible;
+    }
+}
+
+@keyframes marginright {
+    0%{
+        
+        margin-right: -4em;
+    }
+    25%{
+       
+        margin-right: -3em;
+   
+    }
+    50%{
+        margin-right: -2em;
+        
+    }
+    75%{
+        margin-right: -1em;
+    }
+    100%{
+        margin-right: 0em;
     }
 }

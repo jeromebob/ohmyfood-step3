@@ -227,7 +227,7 @@
                 position: absolute;
                 font-size: x-large;
                 transform: translateY(-50%);
-                right: $space10+10;
+                right: $space10+5;
                 .fas{
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -256,6 +256,7 @@
 
 /*BOUTON COMMANDER*/
 @mixin btnexploresto{
+    @include flexcenter;
     @include margin20TB;
     border-style: none;
     height: 60px;
@@ -265,6 +266,13 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+    width: 60%;
+    @media screen and (min-width: 768px){
+        width: 20%;
+        font-size: 28px;
+        height: 80px;
+        transition: all 1.5s ease-in-out;
+    }
 }
 
 /*FOOTER*/

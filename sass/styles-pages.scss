@@ -66,11 +66,10 @@ a {
         &:hover{
             .menu__check{
                 margin-right: 0;
-                transition: rotation-check 0.35s ease-in-out;
             }
             .fa-check-circle{
-                -webkit-animation: rotation-check 0.35s ease-in-out both;
-                animation: rotation-check 0.35s ease-in-out both;  
+                -webkit-animation: rotation-check 1s ease both;
+                animation: rotation-check 1s ease both; 
             }
     }
     &__div1{
@@ -116,13 +115,8 @@ a {
     text-decoration: none;
         &__btn{
             @include flexcenter100;
-            font-size: 20px;
             @include btnexploresto;
-        &:hover{
-            color: $linear-violetr-lighter;
-        }   
     }
- 
 }
 /*FOOTER*/
 .footer{

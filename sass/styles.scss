@@ -89,8 +89,20 @@ a {
                 width: 90%;
         }
         &__divbox{
-            width: 90%;
-            margin-bottom: 10px;
+            width: 70%;
+                @media screen and (min-width: 992px){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    transition: all 1.5s ease-in-out;
+                    width: 90%;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px){
+                    @include flexcenter100;
+                    @include margin20TB;
+                    flex-direction: column;
+                }  
         }
         &__div{
             @include margin20TB;
@@ -100,7 +112,26 @@ a {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);  
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+            transition: all 1s linear;
+            width: 50%;
+            flex-shrink: 0;
+            width: 420px;
+            position: relative;
+                @media screen and (max-width: 768px){
+                    width: 28%;
+                    transition: all 1s linear;
+                    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.6);
+                    font-size: large;
+                    flex-shrink: 0;
+                    width: 322px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px){
+                    width: 100%;
+                    transform: translate(-50%, 0%);
+                    flex-shrink: 0;
+                    width: 380px;
+                }
                 &:hover{
                     background-color: lighten($violet, 35%);
                     color: $violet;
@@ -121,9 +152,16 @@ a {
             background: $violet;
             color: $blanc;
             position: absolute;
-            left: 7%;
-            transform: translate(-50%, -6%);
             z-index: 1;
+            
+                @media screen and (min-width: 768px){
+                    left: -14pt;
+                    transition: all 1s ease-in;
+                }
+                @media screen  and (max-width: 992px){
+                    left: -13pt;
+                    transition: all 1s ease-in;
+                }    
         }
 }
 /*SECTION RESTAURANTS*/

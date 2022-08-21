@@ -93,10 +93,6 @@
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
   }
-  50% {
-    -webkit-transform: rotateZ(180deg);
-    transform: rotateZ(180deg);
-  }
   100% {
     -webkit-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
@@ -106,7 +102,6 @@
 @keyframes apparition {
   0% {
     opacity: 0;
-    visibility: hidden;
   }
   20% {
     opacity: 0.2;
@@ -122,7 +117,23 @@
   }
   100% {
     opacity: 1;
-    visibility: visible;
+  }
+}
+@keyframes marginright {
+  0% {
+    margin-right: -4em;
+  }
+  25% {
+    margin-right: -3em;
+  }
+  50% {
+    margin-right: -2em;
+  }
+  75% {
+    margin-right: -1em;
+  }
+  100% {
+    margin-right: 0em;
   }
 }
 * {
@@ -296,6 +307,9 @@ a {
   width: 80%;
 }
 .present__btnexploresto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px 0px 20px 0px;
   border-style: none;
   height: 60px;
@@ -305,6 +319,15 @@ a {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+  width: 60%;
+}
+@media screen and (min-width: 768px) {
+  .present__btnexploresto {
+    width: 20%;
+    font-size: 28px;
+    height: 80px;
+    transition: all 1.5s ease-in-out;
+  }
 }
 .present__a {
   color: #ffffff;
@@ -318,8 +341,27 @@ a {
   width: 90%;
 }
 .fonctionmt__divbox {
-  width: 90%;
-  margin-bottom: 10px;
+  width: 70%;
+}
+@media screen and (min-width: 992px) {
+  .fonctionmt__divbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    transition: all 1.5s ease-in-out;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .fonctionmt__divbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+    flex-direction: column;
+  }
 }
 .fonctionmt__div {
   margin: 20px 0px 20px 0px;
@@ -330,6 +372,29 @@ a {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  transition: all 1s linear;
+  width: 50%;
+  flex-shrink: 0;
+  width: 420px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .fonctionmt__div {
+    width: 28%;
+    transition: all 1s linear;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.6);
+    font-size: large;
+    flex-shrink: 0;
+    width: 322px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .fonctionmt__div {
+    width: 100%;
+    transform: translate(-50%, 0%);
+    flex-shrink: 0;
+    width: 380px;
+  }
 }
 .fonctionmt__div:hover {
   background-color: #f2eafb;
@@ -352,9 +417,19 @@ a {
   background: #9356DC;
   color: #ffffff;
   position: absolute;
-  left: 7%;
-  transform: translate(-50%, -6%);
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .fonctionmt__nb {
+    left: -14pt;
+    transition: all 1s ease-in;
+  }
+}
+@media screen and (max-width: 992px) {
+  .fonctionmt__nb {
+    left: -13pt;
+    transition: all 1s ease-in;
+  }
 }
 
 /*SECTION RESTAURANTS*/
@@ -405,7 +480,7 @@ a {
   position: absolute;
   font-size: x-large;
   transform: translateY(-50%);
-  right: 20px;
+  right: 15px;
 }
 .resto__txtcards__i .fas {
   background-clip: text;
