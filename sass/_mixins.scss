@@ -84,20 +84,6 @@
 @mixin  none {
     display: none;
 }
-/*position absolue en 50-50 sur axe X et Y
-@include absolute pas besoin de paranthèse (valuer deja connu)*/
-/*BUTTONS*/
-/*@mixin heading-shadow($colour: $rose){
-    text-shadow: .55rem .55rem $colour;
-}
-
-@mixin heading-shadow-size($colour: $violet, $shadow-size: $heading-shadow-size){
-    text-shadow: $shadow-size solid $colour;
-}
-
-@mixin buttonhov ($colour:$linear-violetr, $size: $heading-shadow-size){
-    text-shadow: $size $size lighten($color: $violet, 30%);
-}*/
 /*POSITION*/
 @mixin positionO{
     top: 0;
@@ -200,6 +186,15 @@
                 }  
         }
 }
+/*FONDU DU LOADER*/
+@mixin fondu {
+   animation: disparition 1.5s ease-in-out ;
+}
+/*ANIMATION DU DOT LOADER*/
+@mixin fondu_dot{
+    animation: disparition_dot 1.5s linear;
+ }
+/*TITRES*/
 @mixin h1{
     font-weight: 800;
     width: 60%;
@@ -207,12 +202,7 @@
     margin: 10px 0 5px 0px;
     text-align: center;
 }
-@mixin fondu {
-   animation: disappear 1.5s ease-in-out ;
-}
-@mixin fondu_dot {
-    animation: disappear_dot 1.5s linear;
- }
+
 @mixin infinteback{
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
@@ -226,25 +216,45 @@
         @include spacebetween;
         margin: 0 20px 0 20px;
             &__boxtxt{
-                @include flexstartcolumn;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
                 height: 50px;
                 margin: 10px 0 10px 5px;
+                font-size: 18px;
             }
             &__i{
                 position: absolute;
                 font-size: x-large;
                 transform: translateY(-50%);
                 right: $space10+10;
-            }
-            .fas{
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                &:hover{
-                    background-image: $linear-violetr;
+                .fas{
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    &:hover{
+                        background-image: $linear-violetr-lighter;
+                        animation: apparition 1s linear;
+                    }
                 }
-            }
+            }   
 }
+/*MIXINS DELA COCHE*/
+@mixin box-menus{
+    box-shadow: 2px 2px 3px $noir;
+    border-radius: 20px;
+    width: 90%;
+    height: 70px;
+    @include margin20TB;
+    padding-left: 10px;
+}
+@mixin texthidden{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*BOUTON COMMANDER*/
 @mixin btnexploresto{
     @include margin20TB;
     border-style: none;
@@ -256,6 +266,7 @@
     font-weight: 600;
     cursor: pointer;
 }
+
 /*FOOTER*/
 @mixin footer{
     @include flexstartcolumn;
@@ -263,7 +274,7 @@
     width: 100%;
     padding-left: 20px;
     color: $blanc;
-        &_boxlogo{
+        &__boxlogo{
             width: 100%;
         }
         &__logo{
@@ -276,6 +287,7 @@
         }
         &__ul{
             width: 100%;
+            font-size: 20px;
                 &__li{
                     list-style-type: none;
                     &__a{
@@ -294,18 +306,5 @@
                     }
                 }
         } 
-}
-@mixin box-menus{
-    box-shadow: 2px 2px 3px $noir;
-    border-radius: 20px;
-    width: 90%;
-    height: 70px;
-    @include margin20TB;
-    padding-left: 10px;
-}
-@mixin texthidden{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 }
 

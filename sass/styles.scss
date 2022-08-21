@@ -59,6 +59,7 @@ a {
             width: 80%
         }
 }
+/*DESCRIPTION*/
 .present{
     @include flexcenter100;
     margin: 30px 0 30px 0px;
@@ -76,12 +77,6 @@ a {
         }
         &__btnexploresto{
             @include btnexploresto;
-                @media screen (max-width 768px){
-                    width: 60%;
-                }
-                &:hover{
-                    @include buttonhov;
-                }
         }
         &__a{
             color: $blanc
@@ -156,7 +151,7 @@ a {
             @include textcards;
         }
 }
-.nouveau{
+.resto__a, .nouveau{
     position: relative;
 }
 .nouveau::before{
