@@ -12,14 +12,6 @@
          url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
 }
-/*IMAGES*/
-@mixin imgresto{
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
 /*MIXIN AJUST FLEX*/
 @mixin flexcenter {
     display: flex;
@@ -211,7 +203,6 @@
     font-size: 28px;
 }
 /*RESTAURANTS*/
-
 @mixin textcards{
         @include spacebetween;
         margin: 0 20px 0 20px;
@@ -238,6 +229,14 @@
                     }
                 }
             }   
+}
+/*IMAGES RESTAURANTS*/
+@mixin imgresto{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 /*MIXINS DELA COCHE*/
 @mixin box-menus{
