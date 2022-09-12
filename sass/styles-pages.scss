@@ -18,7 +18,7 @@ a {
     color: $noir;
 }
 li{
-    text-decoration-style: none;
+    list-style-type: none;
 }
 /*BODY*/
 #body{
@@ -77,7 +77,10 @@ li{
     @include spacebetween;
     background-color: $blanc;
     @include box-menus;
+    min-width: 400px;
     overflow: hidden;
+    -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
         &:hover{
             .menu__check{
                 margin-right: 0;
