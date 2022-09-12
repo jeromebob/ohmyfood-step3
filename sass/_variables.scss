@@ -8,6 +8,22 @@ $linearg: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 30%, rgba(147
 $linear-rosev: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 $linear-violetr: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 $linear-violetr-lighter: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 70%);
+$linearg-btn: 
+  linear-gradient(
+    356deg,
+    rgba(155, 89, 220, 1) 0%,
+    rgba(167, 127, 216, 1) 33%,
+    rgba(255, 121, 218, 1) 100%
+  );
+$linearg-btn-hover:
+    linear-gradient(
+    356deg,
+    lighten(rgba(155, 89, 220, 1), 5%) 0%,
+    lighten(rgba(167, 127, 216, 1), 5%) 33%,
+    lighten(rgba(255, 121, 218, 1), 5%) 100%
+  );
+  $colorboxshadow-btn: #7d7d7d;
+  $colorboxshadow-btn-hover: #525252;
 $space10: 10px;
 $fontheader: 42px;
 $fontheader2: 24px;

@@ -325,12 +325,17 @@ li {
   border-style: none;
   height: 60px;
   border-radius: 20px;
-  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(356deg, rgb(155, 89, 220) 0%, rgb(167, 127, 216) 33%, rgb(255, 121, 218) 100%);
+  box-shadow: 0px 2px 10px 0px #7d7d7d;
   color: #ffffff;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   width: 60%;
+}
+.present__btnexploresto:hover {
+  background: linear-gradient(356deg, #a86ee0 0%, #b493de 33%, #ff93e1 100%);
+  box-shadow: 0px 2px 10px 0px #525252;
 }
 .present__a {
   color: #ffffff;
