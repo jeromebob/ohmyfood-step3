@@ -185,6 +185,8 @@ a {
 .main__img {
   width: 100%;
   object-fit: cover;
+  z-index: 0;
+  position: relative;
 }
 
 .resto__txtcards {
@@ -192,6 +194,15 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 20px 0 20px;
+  margin-top: -20px;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #ffffff;
+  width: 100%;
+  margin-left: 0;
+  position: absolute;
+  height: 9vh;
 }
 .resto__txtcards__boxtxt {
   display: flex;
@@ -223,6 +234,7 @@ a {
   align-items: flex-start;
   padding-left: 20px;
   margin: 20px 0px 20px 0px;
+  margin-top: 8em;
 }
 .box-menus__h2 {
   padding-left: 10px;
@@ -360,16 +372,28 @@ a {
 .footer__ul__li__a {
   color: #ffffff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  width: 50%;
   flex-flow: row nowrap;
   margin: 10px 0px 10px 0px;
 }
 .footer__ul__li__a__i {
-  width: 10%;
+  width: 5%;
 }
 .footer__ul__li__a__p {
   width: 90%;
+  padding-left: 20px;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 992px) {
+  .box-menus {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 /*# sourceMappingURL=styles-pages.css.map */

@@ -17,6 +17,9 @@ a {
     text-decoration: none;
     color: $noir;
 }
+li{
+    text-decoration-style: none;
+}
 /*BODY*/
 #body{
     @include columnaround;
@@ -41,9 +44,20 @@ a {
 .main__img{
     width: 100%;
     object-fit: cover;
+    z-index: 0;
+    position: relative;
 }
 .resto__txtcards{
     @include textcards;
+    margin-top: -20px;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: $blanc;
+    width: 100%;
+    margin-left: 0;
+    position: absolute;
+    height: 9vh;
 }
 .box-menus{
     display: flex;
@@ -51,6 +65,7 @@ a {
     align-items: flex-start;
     padding-left: $space10+10;
     @include margin20TB;
+    margin-top: 8em;
         &__h2{
             padding-left: $space10;
         }
@@ -121,4 +136,14 @@ a {
 /*FOOTER*/
 .footer{
     @include footer;
+}
+@media screen and (min-width: 992px){
+    .box-menus{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
 }
