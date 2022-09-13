@@ -1,5 +1,5 @@
-/*FONT*/
-/* shrikhand-regular - latin */
+//*FONT*//
+//* shrikhand-regular - latin *//
 @mixin font-face {
     font-family: 'Shrikhand';
     font-style: normal;
@@ -12,7 +12,7 @@
          url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
 }
-/*MIXIN AJUST FLEX*/
+//*MIXIN AJUST FLEX*//
 @mixin flexcenter {
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
     @include flexcenter;
     flex-direction: column;
 }
-@mixin columnaround{
+@mixin columnaround100{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -76,7 +76,7 @@
 @mixin  none {
     display: none;
 }
-/*POSITION*/
+//*POSITION*//
 @mixin positionO{
     top: 0;
     left: 0;
@@ -99,20 +99,20 @@
     position: absolute;
     z-index: 20;
 }
-/*MARGIN*/
+//*MARGIN*//
 @mixin margin10TB{
     margin: 10px 0px 10px 0px;
 }
 @mixin margin20TB{
     margin: 20px 0px 20px 0px;
 }
-/*BORDER*/
+//*BORDER*//
 @mixin border7{
     border-radius: 50%;
     border: 8px solid transparent;
     border-right: transparent;
 }
-/*ANIMATIONS*/
+//*ANIMATIONS LOADER*//
 @mixin loaderbox {
     @include flexcenter;
     @include positionO;
@@ -178,15 +178,15 @@
                 }  
         }
 }
-/*FONDU DU LOADER*/
+//*FONDU DU LOADER*//
 @mixin fondu {
    animation: disparition 1.5s ease-in-out ;
 }
-/*ANIMATION DU DOT LOADER*/
+//*ANIMATION DU DOT LOADER*//
 @mixin fondu_dot{
     animation: disparition_dot 1.5s linear;
  }
-/*TITRES*/
+//*TITRES*//
 @mixin h1{
     font-weight: 800;
     width: 60%;
@@ -194,7 +194,6 @@
     margin: 10px 0 5px 0px;
     text-align: center;
 }
-
 @mixin infinteback{
     animation-iteration-count: infinite;
     animation-fill-mode: backwards;
@@ -202,7 +201,7 @@
     font-weight: bold;
     font-size: 28px;
 }
-/*RESTAURANTS*/
+//*RESTAURANTS*//
 @mixin textcards{
         @include spacebetween;
         margin: 0 20px 0 20px;
@@ -223,14 +222,15 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     color: transparent;
-                    &:hover{
+                    &:hover,
+                    &:focus {
                         background-image: $linear-violetr-lighter;
                         animation: apparition 1s linear;
                     }
                 }
             }   
 }
-/*IMAGES RESTAURANTS*/
+//*IMAGES RESTAURANTS*//
 @mixin imgresto{
     width: 100%;
     height: 230px;
@@ -238,7 +238,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-/*MIXINS DELA COCHE*/
+//*MIXINS DELA COCHE*//
 @mixin box-menus{
     box-shadow: 2px 2px 3px $noir;
     border-radius: 20px;
@@ -253,7 +253,7 @@
     white-space: nowrap;
 }
 
-/*BOUTON COMMANDER*/
+//*BOUTON COMMANDER*//
 @mixin btnexploresto{
     @include flexcenter;
     @include margin20TB;
@@ -267,12 +267,14 @@
     font-weight: 600;
     cursor: pointer;
     width: 60%;
-    &:hover{
+    &:hover,
+    &:focus
+    {
         background: $linearg-btn-hover;
         box-shadow: 0px 2px 10px 0px $colorboxshadow-btn-hover;
     }
 }
-/*FOOTER*/
+//*FOOTER*//
 @mixin footer{
     @include flexstartcolumn;
     background: $noir;

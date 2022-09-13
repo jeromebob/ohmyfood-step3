@@ -19,22 +19,22 @@ a {
 li{
     list-style-type: none;
 }
-/*BODY*/
+//*BODY*//
 #body{
-    @include columnaround;
+    @include columnaround100;
 }
 .box-logo, .header, .present, #section-geoloc, .geoloc
 .resto, .fonctionmt, #tssections {
     @extend #body;
 }
-/*LOADER*/
+//*LOADER*//
 .loaderbox{
     @include loaderbox;
 }
 .loader{
     @include loader;
 }
-/*HEADER*/
+//*HEADER*//
 .box-logo{
     margin: 10px 0px 10px 0px;
         &__div{
@@ -47,7 +47,7 @@ li{
                 }
         }
 }
-/*SECTION GEOLOC*/
+//*SECTION GEOLOC*//
 .geoloc__icone, .geoloc__txt{
     font-size: 24px;
 }
@@ -63,7 +63,7 @@ li{
             width: 80%
         }
 }
-/*DESCRIPTION*/
+//*DESCRIPTION*//
 .present__h1, .present__p{
     font-size: 30px;
 }
@@ -90,7 +90,7 @@ li{
             color: $blanc
         }
     }
-/*SECTION FONCTIONNEMENT*/
+//*SECTION FONCTIONNEMENT*//
 .fonctionmt{
     width: 95%;
         &__h1{
@@ -113,7 +113,8 @@ li{
             flex-shrink: 0;
             max-width: 420px;
             position: relative;
-                &:hover{
+                &:hover,
+                &:focus{
                     background-color: lighten($violet, 35%);
                     color: $violet;
                     .fonctionmt__h3{
@@ -136,7 +137,7 @@ li{
             z-index: 1;
         }
 }
-/*SECTION RESTAURANTS*/
+//*SECTION RESTAURANTS*//
 .resto{
     @include columncenter100;
     @include margin10TB;
@@ -174,12 +175,15 @@ li{
     top: 20px;
     border-radius: 3px;
     font-weight: 600;
+    top: 34px;
+    z-index: 20;
+    left: 30em;
 }
-/*FOOTER*/
+//*FOOTER*//
 .footer{
     @include footer;
 }
-/*MEDIA QUERIES*/
+//*MEDIA QUERIES*//
 @media screen and (min-width: 768px) and (max-width: 992px){
     .fonctionmt{
         &__h1{

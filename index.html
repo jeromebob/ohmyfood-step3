@@ -14,16 +14,14 @@
     <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/shrikhand" rel="stylesheet">
 </head>
-<body id="body">
-
+<body>
     <div class="loaderbox">
        <div class="loader">
-        <div class="dot">
-            <div class="dot__txt1">Oh</div>
-            <div class="dot__txt2">my</div>
-            <div class="dot__txt3">food</div>
-        </div>
-       </div>
+            <div class="dot">
+                <div class="dot__txt1">Oh</div>
+                <div class="dot__txt2">my</div>
+                <div class="dot__txt3">food</div>
+            </div>
        </div>
     </div>
     <header class="header">
@@ -42,7 +40,7 @@
             <div class="present">
                 <h1 class="present__h1">Réservez le menu qui vous convient</h1>
                 <p class="present__p">Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-                <button class="present__btnexploresto"><a href="#" class="present__a">Explorer nos restaurants</a></button>
+                <a href="#lienresto" class="present__btnexploresto present__a">Explorer nos restaurants</a>
             </div>
         </section>
         <section class="fonctionmt">
@@ -71,63 +69,71 @@
             <h2 class="resto__h2">Restaurants</h2>
             <ul class="resto">
             <li class="resto__cards">
-                <a href="./pages/Menupg.html" class="resto__a nouveau">
-                    <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant la palette du gout"  class="resto__imgresto">
-                    <div class="resto__txtcards">
-                        <div class="resto__txtcards__boxtxt">
-                            <h3 class="resto__h3">La palette du goüt</h3>
-                            <p class="resto__p">Ménilmontant</p>
-                        </div>
-                        <div class="resto__txtcards__i">
-                            <i class="far fa-heart resto__txtcards__i"></i>
-                            <i class="fas fa-heart resto__txtcards__i"></i>
-                        </div>
-                    </div>
+                <a href="./pages/Menupg.html">
+                    <figure class="resto__a nouveau">
+                        <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant la palette du gout"  class="resto__imgresto">
+                        <figcaption class="resto__txtcards">
+                            <section class="resto__txtcards__boxtxt">
+                                <h3 class="resto__h3">La palette du goüt</h3>
+                                <p class="resto__p">Ménilmontant</p>
+                            </section>
+                            <section class="resto__txtcards__i">
+                                <i class="far fa-heart resto__txtcards__i"></i>
+                                <i class="fas fa-heart resto__txtcards__i"></i>
+                            </section>
+                        </figcaption>
+                    </figure>
                 </a>
             </li>
             <li class="resto__cards">
-                <a href="./pages/Menune.html" class="resto__a nouveau">
-                    <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant: la note enchantée"  class="resto__imgresto">
-                    <div class="resto__txtcards">
-                        <div class="resto__txtcards__boxtxt">
-                            <h3 class="resto__h3">La note enchantée</h3>
-                            <p class="resto__p">Charonne</p>
-                        </div>
-                        <div class="resto__txtcards__i">
-                            <i class="far fa-heart resto__txtcards__i"></i>
-                            <i class="fas fa-heart resto__txtcards__i"></i>
-                        </div>
-                    </div>
+                <a href="./pages/Menune.html" id="lienresto">
+                    <figure class="resto__a nouveau">
+                        <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo du restaurant: la note enchantée"  class="resto__imgresto">
+                        <figcaption class="resto__txtcards">
+                            <section class="resto__txtcards__boxtxt">
+                                <h3 class="resto__h3">La note enchantée</h3>
+                                <p class="resto__p">Charonne</p>
+                            </section>
+                            <section class="resto__txtcards__i">
+                                <i class="far fa-heart resto__txtcards__i"></i>
+                                <i class="fas fa-heart resto__txtcards__i"></i>
+                            </section>
+                        </figcaption>
+                    </figure>
                 </a>
             </li>
             <li class="resto__cards">
-                <a href="./pages/Menufr.html" class="resto__a">
-                    <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant: A la française" class="resto__imgresto">
-                    <div class="resto__txtcards">
-                        <div class="resto__txtcards__boxtxt">
-                            <h3 class="resto__h3">A la française</h3>
-                            <p class="resto__p">Cité Rouge</p>
-                        </div>
-                        <div class="resto__txtcards__i">
-                            <i class="far fa-heart resto__txtcards__i"></i>
-                            <i class="fas fa-heart resto__txtcards__i"></i>
-                        </div>
-                    </div>
+                <a href="./pages/Menufr.html">
+                    <figure class="resto__a">
+                        <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant: A la française" class="resto__imgresto">
+                        <figcaption class="resto__txtcards">
+                            <section class="resto__txtcards__boxtxt">
+                                <h3 class="resto__h3">A la française</h3>
+                                <p class="resto__p">Cité Rouge</p>
+                            </section>
+                            <section class="resto__txtcards__i">
+                                <i class="far fa-heart resto__txtcards__i"></i>
+                                <i class="fas fa-heart resto__txtcards__i"></i>
+                            </section>
+                        </figcaption>
+                    </figure>
                 </a>
             </li>
             <li class="resto__cards">
-                <a href="./pages/Menuds.html" class="resto__a">
-                    <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo du restaurant le délice des sens"  class="resto__imgresto">
-                    <div class="resto__txtcards">
-                        <div class="resto__txtcards__boxtxt">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
-                        </div>
-                        <div class="resto__txtcards__i">
-                            <i class="far fa-heart resto__txtcards__i"></i>
-                            <i class="fas fa-heart resto__txtcards__i"></i>
-                        </div>
-                    </div>
+                <a href="./pages/Menuds.html">
+                    <figure class="resto__a">
+                        <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo du restaurant le délice des sens"  class="resto__imgresto">
+                        <figcaption class="resto__txtcards">
+                            <section class="resto__txtcards__boxtxt">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </section>
+                            <section class="resto__txtcards__i">
+                                <i class="far fa-heart resto__txtcards__i"></i>
+                                <i class="fas fa-heart resto__txtcards__i"></i>
+                            </section>
+                        </figcaption>
+                    </figure>
                 </a>
             </li>
             </ul>

@@ -20,10 +20,11 @@ a {
 li{
     list-style-type: none;
 }
-/*BODY*/
+//*BODY*//
 #body{
-    @include columnaround;
+    @include columnaround100;
 }
+//*HEADER*//
 .header{
     display: flex;
     justify-content: space-around;
@@ -41,6 +42,7 @@ li{
             margin-right: 10%;
         }
 }
+//*MAIN*//
 .main__img{
     width: 100%;
     object-fit: cover;
@@ -59,6 +61,7 @@ li{
     position: absolute;
     height: 9vh;
 }
+//*MENUS*//
 .box-menus{
     display: flex;
     flex-flow: column nowrap;
@@ -81,7 +84,8 @@ li{
     overflow: hidden;
     -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-        &:hover{
+        &:hover,
+        &:focus{
             .menu__check{
                 margin-right: 0;
             }
@@ -127,6 +131,7 @@ li{
         flex-shrink: 0; 
     }
 }
+//*BTN COMMAND*//
 .section-command{
     @include flexcenter100;
     @include margin20TB;
