@@ -1,0 +1,290 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_buttons.scss";
+@import "_forms.scss";
+@import "effects.scss";
+
+*{
+    font-family: "roboto";
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+// BODY
+#body{
+    @include columnaround100;
+}
+.box-logo, .header, .present, #section-geoloc, .geoloc
+.resto, .fonctionmt, #tssections {
+    @extend #body;
+}
+// LOADER
+.loaderbox{
+    @include loaderbox;
+}
+.loader{
+    @include loader;
+}
+//*HEADER*//
+.box-logo{
+    margin: 10px 0px 10px 0px;
+        &__div{
+            @include flexcenter100;
+            padding: 10px 0 10px 0;
+                &__img{
+                    margin-top: 0;
+                    @extend .box-logo__div;
+                    width: 50%;
+                }
+        }
+}
+// SECTION GEOLOC
+.geoloc__icone, .geoloc__txt{
+    font-size: 24px;
+}
+.geoloc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        &__icone{
+            width: 20%;
+        }
+        &__txt{
+            border: none;
+            width: 80%
+        }
+}
+// DESCRIPTION
+.present__h1, .present__p{
+    font-size: 30px;
+}
+.present{
+    @include flexcenter100;
+    margin: 30px 0 30px 0px;
+        &__h1{
+            font-weight: 800;
+            width: 60%;
+            letter-spacing: 5px;
+            margin: 10px 0 5px 0px;
+            text-align: center;
+        }
+        &__p{
+            @extend .present__h1;
+            font-weight: normal;
+            width: 40%;
+            @include margin20TB;
+        }
+        &__btnexploresto{
+            @include btnexploresto;
+        }
+        &__a{
+            color: $blanc
+        }
+    }
+// SECTION FONCTIONNEMENT
+.fonctionmt{
+    width: 95%;
+        &__h1{
+            width: 90%;    
+        }
+        &__divbox{
+            width: 70%;
+        }
+        &__div{
+            @include margin20TB;
+            color: $noir;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+            transition: all 1s linear;
+            width: 100%;
+            flex-shrink: 0;
+            max-width: 420px;
+            position: relative;
+                &:hover,
+                &:focus{
+                    background-color: lighten($violet, 35%);
+                    color: $violet;
+                    .fonctionmt__h3{
+                        color: $noir;
+                    }
+                }
+        }
+        &__i{
+            font-size: xx-large;
+        }
+        &__nb{
+            @include flexcenter;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            background: $violet;
+            color: $blanc;
+            position: absolute;
+            z-index: 1;
+        }
+}
+// SECTION RESTAURANTS
+.resto{
+    @include columncenter100;
+    @include margin10TB;
+        &__h2{
+            @extend .resto;
+        }
+        &__cards{
+            width: 90%;
+            background-color: $blanc;
+            box-shadow: 2px 2px 5px grey;
+            border-radius: 20px;
+            @include margin20TB;
+        }
+        &__a{
+            color: $noir;
+        }
+        &__imgresto{
+            @include flexcenter;
+            @include imgresto;
+        }
+        &__txtcards{
+            @include textcards;
+        }
+}
+.resto__a, .nouveau{
+    position: relative;
+}
+.nouveau::before{
+    content: "Nouveau";
+    position: absolute;
+    background-color: $vert;
+    color: darken($vert, 50%);
+    padding: 10px 20px 10px 20px;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    top: 34px;
+    z-index: 20;
+    left: 30em;
+}
+// FOOTER
+.footer{
+    @include footer;
+}
+// MEDIA QUERIES
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .fonctionmt{
+        &__h1{
+            transform: translateX(152pt);
+            transition: all 1.5s ease-in-out;
+        }
+        &__div{
+            width: 100%;
+            flex-shrink: 0;
+            width: 380px;
+        }
+        &__divbox{
+            @include flexcenter100;
+            @include margin20TB;
+            flex-direction: column;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .fonctionmt__divbox{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        transition: all 1.5s ease-in-out;
+        width: 90%;
+        flex-wrap: wrap;
+        }
+    .present__btnexploresto{
+        width: 32%;
+        font-size: 28px;
+        height: 80px;
+        transition: all 1.5s ease-in-out;
+    }
+    .resto{
+        flex-flow: row wrap;
+        justify-content: space-between;
+            &__cards{
+                width: 48%;
+            }
+    }
+}
+@media screen and (max-width: 992px){
+    .geoloc{
+        width: 50%;
+    }
+    .section__resto{
+        width: 85%;
+    } 
+    .fonctionmt__nb{
+        left: -13pt;
+        transition: all 1s ease-in;
+        }
+    .footer__ul__li__a>:nth-of-type(){
+        width: 70%;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 768px){
+.geoloc__icone, .geoloc__txt{
+        font-size: 40px;
+    }
+.fonctionmt__nb{
+    left: -14pt;
+    transition: all 1s ease-in;
+    }
+}
+@media screen and (max-width: 768px){
+    .geoloc{
+        width: 50%;
+    }
+    .present__h1, .present__p{
+        font-size: 20px;
+    }
+    .present{
+        &__h1{
+            width: 100%;
+            letter-spacing: 0;
+        }
+        &__p{
+            width: 80%;
+        }
+        &__div{
+            width: 28%;
+            transition: all 1s linear;
+            box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.6);
+            font-size: large;
+            flex-shrink: 0;
+            width: 360px;
+        }
+    }
+    .fonctionmt__divbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        transition: all 1.5s ease-in-out;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .footer{
+        justify-content: center;
+    }
+}

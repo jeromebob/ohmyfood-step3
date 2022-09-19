@@ -1,0 +1,14 @@
+///.loaderbox{
+///    @if $var == 'fondu'{
+///    opacity: O;
+///    }
+///    @else{
+///    @return 'fondu'}
+/// 
+.menu{
+    @for $i from 1 through $number-of-receipe {
+        &:nth-child(#{$i}) {
+            animation-delay: 200ms * $i;
+        }
+    }
+}

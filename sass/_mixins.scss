@@ -1,0 +1,313 @@
+// FONT
+// shrikhand-regular - latin
+@mixin font-face {
+    font-family: 'Shrikhand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/shrikhand-v11-latin-regular.eot'); // IE9 Compat Modes
+    src: local(''),
+         url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('../fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), // Super Modern Browsers
+         url('../fonts/shrikhand-v11-latin-regular.woff') format('woff'), // Modern Browsers
+         url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), // Safari, Android, iOS
+         url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); // Legacy iOS
+}
+// MIXIN AJUST FLEX
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex80{
+    @include flexcenter;
+    width: 80%;
+}
+@mixin flexcenter100{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+@mixin columncenter100{
+    @include flexcenter;
+    flex-direction: column;
+    width: 100%;
+}
+@mixin columncenter{
+    @include flexcenter;
+    flex-direction: column;
+}
+@mixin columnaround100{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+@mixin spacearound100{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+@mixin spacebetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexend{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row wrap;
+}
+@mixin flexstartcolumn{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+}
+@mixin absolute($x: 50%, $y: 50%){
+    position: absolute;
+    left: $x;
+    top: $y;
+    transform: translate(-$x, -$y);
+}
+@mixin  none {
+    display: none;
+}
+// POSITION
+
+@mixin position10 {
+    top: $space10;
+    left: $space10;
+    right: $space10;
+    bottom: $space10;
+}
+@mixin position25{
+    top: $space10 + 15;
+    left: $space10 + 15;
+    right: $space10 + 15;
+    bottom: $space10 + 15;
+}
+@mixin zindex{
+    position: absolute;
+    z-index: 20;
+}
+// MARGIN
+@mixin margin10TB{
+    margin: 10px 0px 10px 0px;
+}
+@mixin margin20TB{
+    margin: 20px 0px 20px 0px;
+}
+// BORDER
+@mixin border7{
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-right: transparent;
+}
+// ANIMATIONS LOADER
+@mixin loaderbox {
+    @include flexcenter;
+    @include positionO;
+    @include fondu;
+    @include zindex;
+    width: 100%;
+    height: 100vh;
+    background: $noir;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+@mixin loader {
+    display: block;
+        width: 250px;
+        height: 250px;
+        @include border7;
+        @include zindex;
+        animation: spin 2s linear infinite;
+        border-top-color: $vert;
+            &::before, &::after{
+                content: "";
+                @include border7;
+                @include zindex;
+            }
+            &::before{
+                @include position10;
+                border-top-color: $rose;
+                animation: spin 3s linear infinite;
+            }
+            &::after{
+                @include position25;
+                border-top-color: $violet;
+                animation: spin 1.5s linear infinite;
+            }
+        .dot__txt1, .dot__txt2, .dot__txt3{
+            @include flexcenter;
+            @include fondu_dot;
+            @include infinteback;
+        }
+        .dot{
+            @include flexcenter;
+            @include zindex;
+            top: 45px;
+            right: 45px;
+            bottom: 45Spx;
+            left: 45px;
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            animation: flash 3s cubic-bezier(0, 0.57, 0, 0.57) infinite;
+            background: $linearg;
+                &__txt1{
+                    animation-delay: 500ms ;
+                    color: $vert;
+                }
+                &__txt2{
+                    color: $violet;
+                    animation-delay: 1.5s;
+                }    
+                &__txt3{
+                    animation-delay: 3s;
+                    color: $rose;
+                }  
+        }
+}
+// FONDU DU LOADER
+@mixin fondu {
+   animation: disparition 1.5s ease-in-out ;
+}
+// ANIMATION DU DOT LOADER
+@mixin fondu_dot{
+    animation: disparition_dot 1.5s linear;
+ }
+//  TITRES
+@mixin h1{
+    font-weight: 800;
+    width: 60%;
+    letter-spacing: 1px;
+    margin: 10px 0 5px 0px;
+    text-align: center;
+}
+@mixin infinteback{
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-duration:  3s;
+    font-weight: bold;
+    font-size: 28px;
+}
+// RESTAURANTS 
+@mixin textcards{
+        @include spacebetween;
+        margin: 0 20px 0 20px;
+            &__boxtxt{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                height: 50px;
+                margin: 10px 0 10px 5px;
+                font-size: 18px;
+            }
+            &__i{
+                position: absolute;
+                font-size: x-large;
+                transform: translateY(-50%);
+                right: $space10+5;
+                .fas{
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    &:hover,
+                    &:focus {
+                        background-image: $linear-violetr-lighter;
+                        animation: apparition 1s linear;
+                    }
+                }
+            }   
+}
+// IMAGES RESTAURANTS
+@mixin imgresto{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+// MIXINS DELA COCHE
+@mixin box-menus{
+    box-shadow: 2px 2px 3px $noir;
+    border-radius: 20px;
+    width: 90%;
+    height: 70px;
+    @include margin20TB;
+    padding-left: 10px;
+}
+@mixin texthidden{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+// BOUTON COMMANDER
+@mixin btnexploresto{
+    @include flexcenter;
+    @include margin20TB;
+    border-style: none;
+    height: 60px;
+    border-radius: 20px;
+    background: $linearg-btn;
+    box-shadow: 0px 2px 10px 0px $colorboxshadow-btn;
+    color: $blanc;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 60%;
+    &:hover,
+    &:focus
+    {
+        background: $linearg-btn-hover;
+        box-shadow: 0px 2px 10px 0px $colorboxshadow-btn-hover;
+    }
+}
+// FOOTER
+@mixin footer{
+    @include flexstartcolumn;
+    background: $noir;
+    width: 100%;
+    padding-left: 20px;
+    color: $blanc;
+        &__boxlogo{
+            width: 100%;
+        }
+        &__logo{
+            width: 70%;
+            height: 50px;
+            @include margin10TB;
+            font-family: "shrikhand";
+            font-style: italic;
+            font-size: 28px;
+        }
+        &__ul{
+            width: 100%;
+            font-size: 20px;
+                &__li{
+                    list-style-type: none;
+                    &__a{
+                        color: $blanc;
+                        display: flex;
+                        align-items: center;
+                        width: 50%;
+                        flex-flow: row nowrap;
+                        @include margin10TB;
+                            &__i{
+                                width: 5%;
+                            }
+                            &__p{
+                                width: 90%;
+                                padding-left: 20px;
+                                white-space: nowrap;
+                            }
+                    }
+                }
+        } 
+}

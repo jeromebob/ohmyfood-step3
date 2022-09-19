@@ -1,0 +1,160 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_buttons.scss";
+@import "_forms.scss";
+@import "effects.scss";
+
+*{
+    font-family: "roboto";
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: $noir;
+}
+li{
+    list-style-type: none;
+}
+// BODY
+#body{
+    @include columnaround100;
+}
+// HEADER
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: $space10+10;
+        &__i{
+            @include flexcenter;
+            width: 5%;
+            font-size: x-large;
+        }
+        &__img{
+            @include flexcenter;
+            width: 95%;
+            margin-right: 10%;
+        }
+}
+// MAIN
+main{
+    position: relative;
+}
+.main__img{
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+    position: relative;
+}
+.resto__txtcards{
+    @include textcards;
+    margin-top: -20px;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: $blanc;
+    width: 100%;
+    margin-left: 0;
+    position: absolute;
+}
+// MENUS
+.box-menus{
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    @include margin20TB;
+    margin-top: 8em;
+        &__h2{
+            padding-left: $space10;
+        }
+}
+.menu i.fas.fa-check-circle{
+    font-size: x-large;
+}
+.menu{
+    @include spacebetween;
+    background-color: $blanc;
+    @include box-menus;
+    min-width: 400px;
+    overflow: hidden;
+    -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+        &:hover,
+        &:focus{
+            .menu__check{
+                margin-right: 0;
+            }
+            .fa-check-circle{
+                -webkit-animation: rotation-check 1s ease both;
+                animation: rotation-check 1s ease both; 
+            }
+    }
+    &__div1{
+        width: 100%;
+        overflow: hidden;
+            h3, p{
+                @include texthidden
+            }
+            &__h3{
+                padding-left: $space10;
+            }
+            &__p{
+                font-size: 16px;
+                padding-left: $space10;
+            }
+    }
+    &__price{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        vertical-align: bottom;
+        width: 4em;
+        font-weight: bold;
+        margin-left: 2rem;
+        font-size: 18px;
+        
+    }
+    &__check{
+        @include flexcenter;
+        background-color: $vert;
+        color: $blanc;
+        width: 20%;
+        font-size: x-large;
+        border-radius: 0 20px 20px 0;
+        height: 70px;
+        margin-right: -4em;  
+        flex-shrink: 0; 
+    }
+}
+// BTN COMMAND
+.section-command{
+    @include flexcenter100;
+    @include margin20TB;
+    text-decoration: none;
+        &__btn{
+            @include flexcenter100;
+            @include btnexploresto;
+    }
+}
+// FOOTER
+.footer{
+    @include footer;
+    margin-bottom: -27px;
+}
+@media screen and (min-width: 992px){
+    .box-menus{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
