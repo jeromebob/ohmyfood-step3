@@ -77,6 +77,13 @@
     display: none;
 }
 // POSITION
+@mixin position0 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 
 @mixin position10 {
     top: $space10;
@@ -110,7 +117,7 @@
 // ANIMATIONS LOADER
 @mixin loaderbox {
     @include flexcenter;
-    @include positionO;
+    @include position0;
     @include fondu;
     @include zindex;
     width: 100%;
