@@ -232,7 +232,6 @@ main {
 .main__img {
   width: 100%;
   object-fit: cover;
-  z-index: 0;
   position: relative;
 }
 
@@ -278,7 +277,7 @@ main {
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: center;
   margin: 20px 0px 20px 0px;
   margin-top: 8em;
 }
@@ -436,9 +435,12 @@ main {
   .box-menus {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .main__img {
+    height: 400px;
   }
 }
 
