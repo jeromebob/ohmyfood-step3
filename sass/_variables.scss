@@ -1,3 +1,4 @@
+// Couleurs
 $vert: #99E2D0;
 $rose: #FF79DA;
 $violet: #9356DC;
@@ -24,13 +25,20 @@ $linearg-btn-hover:
   );
   $colorboxshadow-btn: #7d7d7d;
   $colorboxshadow-btn-hover: #525252;
+
+  // Espace
 $space10: 10px;
+
+// Taille
 $fontheader: 42px;
 $fontheader2: 24px;
+
+// Position
 $x: -50%;
 $y: -50%;
 $z: -50%;
 $left: $x;
 $right: $y;
 $top: $z;
+
 $number-of-receipe: 10;

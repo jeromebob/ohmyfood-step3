@@ -1,18 +1,18 @@
-//*FONT*//
-//* shrikhand-regular - latin *//
+// FONT
+// shrikhand-regular - latin
 @mixin font-face {
     font-family: 'Shrikhand';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/shrikhand-v11-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/shrikhand-v11-latin-regular.eot'); // IE9 Compat Modes
     src: local(''),
-         url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/shrikhand-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); /* Legacy iOS */
+         url('../fonts/shrikhand-v11-latin-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('../fonts/shrikhand-v11-latin-regular.woff2') format('woff2'), // Super Modern Browsers
+         url('../fonts/shrikhand-v11-latin-regular.woff') format('woff'), // Modern Browsers
+         url('../fonts/shrikhand-v11-latin-regular.ttf') format('truetype'), // Safari, Android, iOS
+         url('../fonts/shrikhand-v11-latin-regular.svg#Shrikhand') format('svg'); // Legacy iOS
 }
-//*MIXIN AJUST FLEX*//
+// MIXIN AJUST FLEX
 @mixin flexcenter {
     display: flex;
     justify-content: center;
@@ -76,46 +76,48 @@
 @mixin  none {
     display: none;
 }
-//*POSITION*//
-@mixin positionO{
+// POSITION
+@mixin position0 {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
+
+
 @mixin position10 {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    top: $space10;
+    left: $space10;
+    right: $space10;
+    bottom: $space10;
 }
 @mixin position25{
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
+    top: $space10 + 15;
+    left: $space10 + 15;
+    right: $space10 + 15;
+    bottom: $space10 + 15;
 }
 @mixin zindex{
     position: absolute;
     z-index: 20;
 }
-//*MARGIN*//
+// MARGIN
 @mixin margin10TB{
     margin: 10px 0px 10px 0px;
 }
 @mixin margin20TB{
     margin: 20px 0px 20px 0px;
 }
-//*BORDER*//
+// BORDER
 @mixin border7{
     border-radius: 50%;
     border: 8px solid transparent;
     border-right: transparent;
 }
-//*ANIMATIONS LOADER*//
+// ANIMATIONS LOADER
 @mixin loaderbox {
     @include flexcenter;
-    @include positionO;
+    @include position0;
     @include fondu;
     @include zindex;
     width: 100%;
@@ -178,15 +180,15 @@
                 }  
         }
 }
-//*FONDU DU LOADER*//
+// FONDU DU LOADER
 @mixin fondu {
    animation: disparition 1.5s ease-in-out ;
 }
-//*ANIMATION DU DOT LOADER*//
+// ANIMATION DU DOT LOADER
 @mixin fondu_dot{
     animation: disparition_dot 1.5s linear;
  }
-//*TITRES*//
+//  TITRES
 @mixin h1{
     font-weight: 800;
     width: 60%;
@@ -201,7 +203,7 @@
     font-weight: bold;
     font-size: 28px;
 }
-//*RESTAURANTS*//
+// RESTAURANTS 
 @mixin textcards{
         @include spacebetween;
         margin: 0 20px 0 20px;
@@ -230,7 +232,7 @@
                 }
             }   
 }
-//*IMAGES RESTAURANTS*//
+// IMAGES RESTAURANTS
 @mixin imgresto{
     width: 100%;
     height: 230px;
@@ -238,7 +240,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-//*MIXINS DELA COCHE*//
+// MIXINS DELA COCHE
 @mixin box-menus{
     box-shadow: 2px 2px 3px $noir;
     border-radius: 20px;
@@ -253,7 +255,7 @@
     white-space: nowrap;
 }
 
-//*BOUTON COMMANDER*//
+// BOUTON COMMANDER
 @mixin btnexploresto{
     @include flexcenter;
     @include margin20TB;
@@ -274,7 +276,7 @@
         box-shadow: 0px 2px 10px 0px $colorboxshadow-btn-hover;
     }
 }
-//*FOOTER*//
+// FOOTER
 @mixin footer{
     @include flexstartcolumn;
     background: $noir;

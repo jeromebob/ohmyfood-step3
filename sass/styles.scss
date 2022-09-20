@@ -19,7 +19,7 @@ a {
 li{
     list-style-type: none;
 }
-//*BODY*//
+// BODY
 #body{
     @include columnaround100;
 }
@@ -27,7 +27,7 @@ li{
 .resto, .fonctionmt, #tssections {
     @extend #body;
 }
-//*LOADER*//
+// LOADER
 .loaderbox{
     @include loaderbox;
 }
@@ -47,7 +47,7 @@ li{
                 }
         }
 }
-//*SECTION GEOLOC*//
+// SECTION GEOLOC
 .geoloc__icone, .geoloc__txt{
     font-size: 24px;
 }
@@ -63,7 +63,7 @@ li{
             width: 80%
         }
 }
-//*DESCRIPTION*//
+// DESCRIPTION
 .present__h1, .present__p{
     font-size: 30px;
 }
@@ -90,7 +90,7 @@ li{
             color: $blanc
         }
     }
-//*SECTION FONCTIONNEMENT*//
+// SECTION FONCTIONNEMENT
 .fonctionmt{
     width: 95%;
         &__h1{
@@ -137,7 +137,7 @@ li{
             z-index: 1;
         }
 }
-//*SECTION RESTAURANTS*//
+// SECTION RESTAURANTS
 .resto{
     @include columncenter100;
     @include margin10TB;
@@ -179,11 +179,11 @@ li{
     z-index: 20;
     left: 30em;
 }
-//*FOOTER*//
+// FOOTER
 .footer{
     @include footer;
 }
-//*MEDIA QUERIES*//
+// MEDIA QUERIES
 @media screen and (min-width: 768px) and (max-width: 992px){
     .fonctionmt{
         &__h1{
@@ -237,10 +237,6 @@ li{
         left: -13pt;
         transition: all 1s ease-in;
         }
-    .footer__ul__li__a>:nth-of-type(){
-        width: 70%;
-        justify-content: space-between;
-    }
 }
 @media screen and (min-width: 768px){
 .geoloc__icone, .geoloc__txt{

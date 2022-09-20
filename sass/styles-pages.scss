@@ -20,11 +20,11 @@ a {
 li{
     list-style-type: none;
 }
-//*BODY*//
+// BODY
 #body{
     @include columnaround100;
 }
-//*HEADER*//
+// HEADER
 .header{
     display: flex;
     justify-content: space-around;
@@ -42,11 +42,13 @@ li{
             margin-right: 10%;
         }
 }
-//*MAIN*//
+// MAIN
+main{
+    position: relative;
+}
 .main__img{
     width: 100%;
     object-fit: cover;
-    z-index: 0;
     position: relative;
 }
 .resto__txtcards{
@@ -59,14 +61,13 @@ li{
     width: 100%;
     margin-left: 0;
     position: absolute;
-    height: 9vh;
 }
-//*MENUS*//
+// MENUS
 .box-menus{
     display: flex;
+    justify-content: center;
     flex-flow: column nowrap;
-    align-items: flex-start;
-    padding-left: $space10+10;
+    align-items: center;
     @include margin20TB;
     margin-top: 8em;
         &__h2{
@@ -131,7 +132,7 @@ li{
         flex-shrink: 0; 
     }
 }
-//*BTN COMMAND*//
+// BTN COMMAND
 .section-command{
     @include flexcenter100;
     @include margin20TB;
@@ -141,17 +142,21 @@ li{
             @include btnexploresto;
     }
 }
-/*FOOTER*/
+// FOOTER
 .footer{
     @include footer;
+    margin-bottom: -27px;
 }
 @media screen and (min-width: 992px){
     .box-menus{
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .main__img{
+        height: 400px;
     }
     
 }

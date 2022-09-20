@@ -1,9 +1,8 @@
-/*.loaderbox{
-    @if $var == 'fondu'{
-    opacity: O;
+// ANIMATION APPARITION MENUS
+.menu{
+    @for $i from 1 through $number-of-receipe {
+        &:nth-child(#{$i}) {
+            animation-delay: 300ms * $i;
+        }
     }
-    @else{
-        @return 'fondu'
-    }
-}*/
-    
+}
