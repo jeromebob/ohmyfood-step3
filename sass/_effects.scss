@@ -1,11 +1,13 @@
+// ANIMATION ROTATION CHECK
 @keyframes spin{
     0%{
-        transform: rotate(Odeg)
+        transform: rotate(0deg)
     }
     100%{
         transform: rotate(360deg);
     }
 }
+// ANIMATION FLASH DU DOT LOADER
 @keyframes flash{
     0%{
         box-shadow: none;
@@ -29,6 +31,7 @@
         box-shadow: none;
     }
 }
+// ANIMATION FONDU LOADER
 @keyframes disparition {
     0%{
         opacity: 0.9;
@@ -52,6 +55,7 @@
         visibility: hidden;
     }
 }
+// ANIMATION FONDU DOT LOADER
 @keyframes disparition_dot {
     0%{
         opacity: 1;
@@ -104,7 +108,7 @@
         opacity: 1;
     }
 }
-
+// ANIMATION APPARITION "BOUTON CHECK"
 @keyframes marginright {
     0%{
         
@@ -128,6 +132,7 @@
         margin-right: 0em;
     }
 }
+// ANIMATION APPARITION MENUS (PAR AMINISTA.COM)
  @-webkit-keyframes scale-in-ver-top {
     0% {
       -webkit-transform: scaleY(0);

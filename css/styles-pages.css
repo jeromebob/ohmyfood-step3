@@ -1,37 +1,37 @@
 .menu:nth-child(1) {
-  animation-delay: 200ms;
+  animation-delay: 300ms;
 }
 .menu:nth-child(2) {
-  animation-delay: 400ms;
-}
-.menu:nth-child(3) {
   animation-delay: 600ms;
 }
+.menu:nth-child(3) {
+  animation-delay: 900ms;
+}
 .menu:nth-child(4) {
-  animation-delay: 800ms;
-}
-.menu:nth-child(5) {
-  animation-delay: 1000ms;
-}
-.menu:nth-child(6) {
   animation-delay: 1200ms;
 }
-.menu:nth-child(7) {
-  animation-delay: 1400ms;
+.menu:nth-child(5) {
+  animation-delay: 1500ms;
 }
-.menu:nth-child(8) {
-  animation-delay: 1600ms;
-}
-.menu:nth-child(9) {
+.menu:nth-child(6) {
   animation-delay: 1800ms;
 }
+.menu:nth-child(7) {
+  animation-delay: 2100ms;
+}
+.menu:nth-child(8) {
+  animation-delay: 2400ms;
+}
+.menu:nth-child(9) {
+  animation-delay: 2700ms;
+}
 .menu:nth-child(10) {
-  animation-delay: 2000ms;
+  animation-delay: 3000ms;
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(Odeg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
