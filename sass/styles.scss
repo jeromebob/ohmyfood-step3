@@ -34,7 +34,7 @@ li{
 .loader{
     @include loader;
 }
-//*HEADER*//
+// HEADER
 .box-logo{
     margin: 10px 0px 10px 0px;
         &__div{
@@ -60,7 +60,7 @@ li{
         }
         &__txt{
             border: none;
-            width: 80%
+            width: 165px;
         }
 }
 // DESCRIPTION
@@ -97,7 +97,7 @@ li{
             width: 90%;    
         }
         &__divbox{
-            width: 70%;
+            width: 90%;
         }
         &__div{
             @include margin20TB;
@@ -135,6 +135,7 @@ li{
             color: $blanc;
             position: absolute;
             z-index: 1;
+            left: -23px;
         }
 }
 // SECTION RESTAURANTS
@@ -145,7 +146,7 @@ li{
             @extend .resto;
         }
         &__cards{
-            width: 90%;
+            width: 100%;
             background-color: $blanc;
             box-shadow: 2px 2px 5px grey;
             border-radius: 20px;
@@ -175,9 +176,6 @@ li{
     top: 20px;
     border-radius: 3px;
     font-weight: 600;
-    top: 34px;
-    z-index: 20;
-    left: 30em;
 }
 // FOOTER
 .footer{
@@ -277,7 +275,7 @@ li{
         align-items: center;
         flex-direction: row;
         transition: all 1.5s ease-in-out;
-        width: 80%;
+        width: 90%;
         flex-wrap: wrap;
     }
     .footer{

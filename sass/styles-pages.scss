@@ -81,7 +81,7 @@ main{
     @include spacebetween;
     background-color: $blanc;
     @include box-menus;
-    min-width: 400px;
+    min-width: 350px;
     overflow: hidden;
     -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
@@ -116,7 +116,7 @@ main{
         vertical-align: bottom;
         width: 4em;
         font-weight: bold;
-        margin-left: 2rem;
+        margin-left: -4rem;
         font-size: 18px;
         
     }
@@ -158,5 +158,4 @@ main{
     .main__img{
         height: 400px;
     }
-    
 }

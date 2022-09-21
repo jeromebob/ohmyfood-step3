@@ -207,6 +207,7 @@
 @mixin textcards{
         @include spacebetween;
         margin: 0 20px 0 20px;
+        position: relative;
             &__boxtxt{
                 display: flex;
                 justify-content: flex-start;
@@ -283,6 +284,7 @@
     width: 100%;
     padding-left: 20px;
     color: $blanc;
+    justify-content: center;
         &__boxlogo{
             width: 100%;
         }

@@ -1,37 +1,37 @@
 .menu:nth-child(1) {
-  animation-delay: 200ms;
+  animation-delay: 300ms;
 }
 .menu:nth-child(2) {
-  animation-delay: 400ms;
-}
-.menu:nth-child(3) {
   animation-delay: 600ms;
 }
+.menu:nth-child(3) {
+  animation-delay: 900ms;
+}
 .menu:nth-child(4) {
-  animation-delay: 800ms;
-}
-.menu:nth-child(5) {
-  animation-delay: 1000ms;
-}
-.menu:nth-child(6) {
   animation-delay: 1200ms;
 }
-.menu:nth-child(7) {
-  animation-delay: 1400ms;
+.menu:nth-child(5) {
+  animation-delay: 1500ms;
 }
-.menu:nth-child(8) {
-  animation-delay: 1600ms;
-}
-.menu:nth-child(9) {
+.menu:nth-child(6) {
   animation-delay: 1800ms;
 }
+.menu:nth-child(7) {
+  animation-delay: 2100ms;
+}
+.menu:nth-child(8) {
+  animation-delay: 2400ms;
+}
+.menu:nth-child(9) {
+  animation-delay: 2700ms;
+}
 .menu:nth-child(10) {
-  animation-delay: 2000ms;
+  animation-delay: 3000ms;
 }
 
 @keyframes spin {
   0% {
-    transform: rotate(Odeg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -326,7 +326,7 @@ li {
 }
 .geoloc__txt {
   border: none;
-  width: 80%;
+  width: 165px;
 }
 
 .present__h1, .present__p {
@@ -383,7 +383,7 @@ li {
   width: 90%;
 }
 .fonctionmt__divbox {
-  width: 70%;
+  width: 90%;
 }
 .fonctionmt__div {
   margin: 20px 0px 20px 0px;
@@ -422,6 +422,7 @@ li {
   color: #ffffff;
   position: absolute;
   z-index: 1;
+  left: -23px;
 }
 
 .resto, .resto__h2 {
@@ -433,7 +434,7 @@ li {
   margin: 10px 0px 10px 0px;
 }
 .resto__cards {
-  width: 90%;
+  width: 100%;
   background-color: #ffffff;
   box-shadow: 2px 2px 5px grey;
   border-radius: 20px;
@@ -457,6 +458,7 @@ li {
   justify-content: space-between;
   align-items: center;
   margin: 0 20px 0 20px;
+  position: relative;
 }
 .resto__txtcards__boxtxt {
   display: flex;
@@ -496,9 +498,6 @@ li {
   top: 20px;
   border-radius: 3px;
   font-weight: 600;
-  top: 34px;
-  z-index: 20;
-  left: 30em;
 }
 
 .footer {
@@ -510,6 +509,7 @@ li {
   width: 100%;
   padding-left: 20px;
   color: #ffffff;
+  justify-content: center;
 }
 .footer__boxlogo {
   width: 100%;
@@ -638,7 +638,7 @@ li {
     align-items: center;
     flex-direction: row;
     transition: all 1.5s ease-in-out;
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
   }
   .footer {
