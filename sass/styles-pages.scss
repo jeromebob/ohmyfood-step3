@@ -85,13 +85,15 @@ main{
     overflow: hidden;
     -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-        &:hover{
+        &:hover,
+        &:focus{
             .menu__check{
                 margin-right: 0;
+                transition: all 1000ms;
             }
             .fa-check-circle{
-                -webkit-animation: rotation-check 1s ease both;
-                animation: rotation-check 1s ease both; 
+                -webkit-animation: rotation-check 1s linear both;
+                animation: rotation-check 1s linear both; 
             }
     }
     &__div1{
