@@ -97,8 +97,8 @@
 }
 @keyframes rotation-check {
   0% {
-    -webkit-transform: rotateZ(0);
-    transform: rotateZ(0);
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(5deg);
   }
   100% {
     -webkit-transform: rotateZ(360deg);
@@ -129,7 +129,6 @@
 @keyframes marginright {
   0% {
     margin-right: -4em;
-    transition-delay: 2OOms;
   }
   25% {
     margin-right: -3em;
@@ -276,7 +275,7 @@ li {
   z-index: 20;
   top: 45px;
   right: 45px;
-  bottom: 45Spx;
+  bottom: 45px;
   left: 45px;
   width: 145px;
   height: 145px;
