@@ -1,0 +1,42 @@
+{
+  "name": "ohmyfood-step3",
+  "version": "1.0.0",
+  "description": "Projet Ohmyfood Open Classrooms",
+  "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "braces": "^3.0.2",
+    "chokidar": "^3.5.3",
+    "anymatch": "^3.1.2",
+    "fill-range": "^7.0.1",
+    "binary-extensions": "^2.2.0",
+    "immutable": "^4.1.0",
+    "is-binary-path": "^2.1.0",
+    "g": "^2.0.1",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "picomatch": "^2.3.1",
+    "normalize-path": "^3.0.0",
+    "glob-parent": "^5.1.2",
+    "is-number": "^7.0.0",
+    "readdirp": "^3.6.0",
+    "sass": "^1.55.0",
+    "to-regex-range": "^5.0.1",
+    "source-map-js": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+        "sass": "sass --watch ./sass/styles.scss:.css/styles.css --style compressed",
+        "sass2": "sass --watch ./sass/styles-pages.scss:.css/styles-pages.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromebob/ohmyfood-step3.git"
+  },
+  "author": "Jerome Bobin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeromebob/ohmyfood-step3/issues"
+  },
+  "homepage": "https://github.com/jeromebob/ohmyfood-step3#readme"
+}
