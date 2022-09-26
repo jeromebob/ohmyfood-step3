@@ -1,8 +1,6 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "_functions.scss";
-@import "_buttons.scss";
-@import "_forms.scss";
 @import "effects.scss";
 
 *{
@@ -52,19 +50,25 @@ li{
     font-size: 24px;
     background: opacity 0;
 }
+.geoloc__icone, .geoloc__txt{
+    background: opacity (0) 
+}
 .geoloc{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background: #e8e8e8;
     padding: 20px 20px 20px 20px;
+    background: #eaea;
+    margin: auto;
+    padding: 20px;
         &__icone{
             width: 40px;
         }
         &__txt{
             border: none;
             width: 300px;
+            background: grey;
         }
 }
 // DESCRIPTION

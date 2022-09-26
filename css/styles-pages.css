@@ -214,7 +214,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 5%;
-  font-size: x-large;
+  font-size: 32px;
 }
 .header__img {
   display: flex;
@@ -255,11 +255,11 @@ main {
   flex-direction: column;
   height: 50px;
   margin: 10px 0 10px 5px;
-  font-size: 18px;
+  font-size: 28px;
 }
 .resto__txtcards__i {
   position: absolute;
-  font-size: x-large;
+  font-size: 32px;
   transform: translateY(-50%);
   right: 15px;
 }
@@ -276,51 +276,44 @@ main {
 .box-menus {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
-  padding-left: 20px;
+  align-items: center;
+  padding-left: 10px;
   margin: 20px 0px 20px 0px;
   margin-top: 8em;
+  max-width: 90%;
+  max-width: inherit;
 }
 .box-menus__h2 {
   padding-left: 10px;
+}
+
+.entrees, .plats, .desserts {
+  max-width: 350px;
 }
 
 .menu i.fas.fa-check-circle {
   font-size: x-large;
 }
 
+.menu, .menu__div1, .menu__div1__h3, .menu__div1__p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .menu {
+  max-width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
   box-shadow: 2px 2px 3px #1e1e1e;
   border-radius: 20px;
-  width: 90%;
   height: 70px;
   margin: 20px 0px 20px 0px;
   padding-left: 10px;
-  min-width: 350px;
-  overflow: hidden;
   -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
   animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
-}
-.menu:hover .menu__check, .menu:focus .menu__check {
-  margin-right: 0;
-  transition: all 1000ms;
-}
-.menu:hover .fa-check-circle, .menu:focus .fa-check-circle {
-  -webkit-animation: rotation-check 1s linear both;
-  animation: rotation-check 1s linear both;
-}
-.menu__div1 {
-  width: 100%;
-  overflow: hidden;
-}
-.menu__div1 h3, .menu__div1 p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .menu__div1__h3 {
   padding-left: 10px;
@@ -333,11 +326,16 @@ main {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  vertical-align: bottom;
   width: 4em;
+  max-width: 4em;
   font-weight: bold;
-  margin-left: 2rem;
+  margin-left: 4rem;
   font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 50px;
+  vertical-align: auto;
 }
 .menu__check {
   display: flex;
@@ -345,12 +343,27 @@ main {
   align-items: center;
   background-color: #99E2D0;
   color: #ffffff;
-  width: 20%;
+  width: 50px;
   font-size: x-large;
   border-radius: 0 20px 20px 0;
   height: 70px;
-  margin-right: -4em;
+  margin-right: -50px;
   flex-shrink: 0;
+  max-width: 50px;
+}
+.menu:hover .menu__price, .menu:focus .menu__price {
+  padding-right: -40px;
+}
+.menu:hover .menu__check, .menu:focus .menu__check {
+  margin-right: 0;
+}
+.menu:hover .fa-check-circle, .menu:focus .fa-check-circle {
+  -webkit-animation: rotation-check 1s linear both;
+  animation: rotation-check 1s linear both;
+}
+
+.menu__price, .menu__check, .fa-check-circle {
+  transition: all 1000ms;
 }
 
 .section-command {
@@ -441,8 +454,15 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .menu {
+    width: 400px;
+    max-width: 450px;
+  }
   .main__img {
     height: 400px;
+  }
+  .resto__txtcards__boxtxt, .resto__txtcards__i {
+    font-size: x-large;
   }
 }
 

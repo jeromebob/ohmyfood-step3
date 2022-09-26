@@ -214,11 +214,11 @@
                 flex-direction: column;
                 height: 50px;
                 margin: 10px 0 10px 5px;
-                font-size: 18px;
+                font-size: 28px;
             }
             &__i{
                 position: absolute;
-                font-size: x-large;
+                font-size: 32px;
                 transform: translateY(-50%);
                 right: $space10+5;
                 .fas{
@@ -245,7 +245,6 @@
 @mixin box-menus{
     box-shadow: 2px 2px 3px $noir;
     border-radius: 20px;
-    width: 90%;
     height: 70px;
     @include margin20TB;
     padding-left: 10px;

@@ -1,8 +1,6 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "_functions.scss";
-@import "_buttons.scss";
-@import "_forms.scss";
 @import "effects.scss";
 
 *{
@@ -34,7 +32,7 @@ li{
         &__i{
             @include flexcenter;
             width: 5%;
-            font-size: x-large;
+            font-size: 32px;
         }
         &__img{
             @include flexcenter;
@@ -66,44 +64,35 @@ main{
 .box-menus{
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-start;
-    padding-left: $space10+10;
+    align-items: center;
+    padding-left: $space10;
     @include margin20TB;
     margin-top: 8em;
+    max-width: 90%;
+    max-width: inherit;
         &__h2{
             padding-left: $space10;
         }
 }
+.entrees, .plats, .desserts{
+    max-width: 350px;
+}
 .menu i.fas.fa-check-circle{
     font-size: x-large;
 }
+.menu, .menu__div1, .menu__div1__h3, .menu__div1__p{
+    @include texthidden;
+}
 .menu{
+    max-width: 30%;
     @include spacebetween;
     background-color: $blanc;
     @include box-menus;
-    min-width: 350px;
-    overflow: hidden;
     -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-        &:hover,
-        &:focus{
-            .menu__check{
-                margin-right: 0;
-                transition: all 1000ms;
-            }
-            .fa-check-circle{
-                -webkit-animation: rotation-check 1s linear both;
-                animation: rotation-check 1s linear both; 
-            }
-    }
-    &__div1{
-        width: 100%;
-        overflow: hidden;
-            h3, p{
-                
-            }
+      &__div1{
             &__h3{
-                padding-left: $space10;
+                padding-left: $space10;    
             }
             &__p{
                 font-size: 16px;
@@ -114,12 +103,14 @@ main{
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        vertical-align: bottom;
         width: 4em;
+        max-width: 4em;
         font-weight: bold;
         margin-left: 4rem;
         font-size: 18px;
         @include texthidden;
+        padding-right: 50px;
+        vertical-align: auto;
         
     }
     &__check{
@@ -134,6 +125,23 @@ main{
         flex-shrink: 0;
         max-width: 50px;
     }
+    &:hover,
+    &:focus{
+        .menu__price{
+            padding-right: -40px;
+        }
+        .menu__check{
+            margin-right: 0;
+        }
+        .fa-check-circle{
+            -webkit-animation: rotation-check 1s linear both;
+            animation: rotation-check 1s linear both;
+            
+        }
+    }
+}
+.menu__price, .menu__check, .fa-check-circle{
+    transition: all 1000ms; 
 }
 // BTN COMMAND
 .section-command{
@@ -158,7 +166,17 @@ main{
         flex-direction: row;
         flex-wrap: wrap;
     }
+    .menu{
+        width: 400px;
+        max-width: 450px;
+    }
     .main__img{
         height: 400px;
+    }
+    .resto__txtcards{
+        &__boxtxt,
+        &__i{
+            font-size: x-large;
+        }
     }
 }
