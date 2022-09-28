@@ -298,6 +298,8 @@ li {
 
 .box-logo {
   margin: 10px 0px 10px 0px;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 .box-logo__div, .box-logo__div__img {
   display: flex;
@@ -313,6 +315,11 @@ li {
 
 .geoloc__icone, .geoloc__txt {
   font-size: 24px;
+  background: opacity 0;
+}
+
+.geoloc__icone, .geoloc__txt {
+  background: opacity 0;
 }
 
 .geoloc {
@@ -320,6 +327,9 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: gainsboro;
+  margin: -10px;
+  padding: 20px;
 }
 .geoloc__icone {
   width: 40px;
@@ -327,6 +337,7 @@ li {
 .geoloc__txt {
   border: none;
   width: 300px;
+  background: 0;
 }
 
 .present__h1, .present__p {
@@ -466,11 +477,11 @@ li {
   flex-direction: column;
   height: 50px;
   margin: 10px 0 10px 5px;
-  font-size: 18px;
+  font-size: 28px;
 }
 .resto__txtcards__i {
   position: absolute;
-  font-size: x-large;
+  font-size: 32px;
   transform: translateY(-50%);
   right: 15px;
 }

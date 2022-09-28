@@ -277,17 +277,17 @@ main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
   padding-left: 10px;
   margin: 20px 0px 20px 0px;
   margin-top: 8em;
-  max-width: 90%;
-  max-width: inherit;
+  max-width: 100%;
 }
 .box-menus__h2 {
   padding-left: 10px;
 }
 
-.entrees, .plats, .desserts {
+.entrees, .plats, .desserts, .menu {
   max-width: 350px;
 }
 
@@ -302,7 +302,6 @@ main {
 }
 
 .menu {
-  max-width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -329,7 +328,7 @@ main {
   width: 4em;
   max-width: 4em;
   font-weight: bold;
-  margin-left: 4rem;
+  margin-left: auto;
   font-size: 18px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -363,7 +362,7 @@ main {
 }
 
 .menu__price, .menu__check, .fa-check-circle {
-  transition: all 1000ms;
+  transition: all 800ms;
 }
 
 .section-command {
@@ -453,6 +452,7 @@ main {
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 0;
   }
   .menu {
     width: 400px;
@@ -461,8 +461,15 @@ main {
   .main__img {
     height: 400px;
   }
-  .resto__txtcards__boxtxt, .resto__txtcards__i {
-    font-size: x-large;
+  .entrees, .plats, .desserts {
+    max-width: 480px;
+    min-width: 480px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .resto__txtcards__boxtxt,
+.resto__txtcards__i {
+    font-size: 18px;
   }
 }
 
