@@ -221,6 +221,7 @@
                 font-size: 22px;
                 transform: translateY(-50%);
                 right: 5px;
+                margin-right: 10px;
                 .fas{
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -283,7 +284,6 @@
     width: 100%;
     padding-left: 20px;
     color: $blanc;
-    justify-content: center;
         &__boxlogo{
             width: 100%;
         }

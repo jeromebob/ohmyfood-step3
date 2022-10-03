@@ -484,6 +484,7 @@ li {
   font-size: 22px;
   transform: translateY(-50%);
   right: 5px;
+  margin-right: 10px;
 }
 .resto__txtcards__i .fas {
   background-clip: text;
@@ -520,7 +521,6 @@ li {
   width: 100%;
   padding-left: 20px;
   color: #ffffff;
-  justify-content: center;
 }
 .footer__boxlogo {
   width: 100%;
