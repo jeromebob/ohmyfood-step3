@@ -214,13 +214,13 @@
                 flex-direction: column;
                 height: 50px;
                 margin: 10px 0 10px 5px;
-                font-size: 28px;
+                font-size: 20px;
             }
             &__i{
                 position: absolute;
-                font-size: 32px;
+                font-size: 22px;
                 transform: translateY(-50%);
-                right: $space10+5;
+                right: 5px;
                 .fas{
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -246,7 +246,7 @@
     box-shadow: 2px 2px 3px $noir;
     border-radius: 20px;
     height: 70px;
-    @include margin20TB;
+    margin: 20px 10px 20px 0px;
     padding-left: 10px;
 }
 @mixin texthidden{

@@ -72,10 +72,13 @@ main{
     max-width: 100%;
         &__h2{
             padding-left: $space10;
+            border-bottom: 4px solid #99E2D0;
+            max-width: 150px;
         }
 }
 .entrees, .plats, .desserts, .menu{
     max-width: 350px;
+    min-width: 350px;
 }
 .menu i.fas.fa-check-circle{
     font-size: x-large;
@@ -108,9 +111,7 @@ main{
         margin-left: auto;
         font-size: 18px;
         @include texthidden;
-        padding-right: 50px;
-        vertical-align: auto;
-        
+        margin-right: -20px;
     }
     &__check{
         @include flexcenter;
@@ -179,8 +180,10 @@ main{
     }
 }
 @media screen and (max-width: 992px){
-    .resto__txtcards__boxtxt,
+    .resto__txtcards__boxtxt{
+            font-size: 16px;
+    }
     .resto__txtcards__i{
-            font-size: 18px;
+        font-size: 22px;
     }
 }

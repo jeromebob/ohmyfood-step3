@@ -327,7 +327,7 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: gainsboro;
+  background: #e8e8e8;
   margin: -10px;
   padding: 20px;
 }
@@ -477,11 +477,11 @@ li {
   flex-direction: column;
   height: 50px;
   margin: 10px 0 10px 5px;
-  font-size: 28px;
+  font-size: 20px;
 }
 .resto__txtcards__i {
   position: absolute;
-  font-size: 32px;
+  font-size: 22px;
   transform: translateY(-50%);
   right: 15px;
 }
