@@ -151,6 +151,13 @@
     transform-origin: 100% 0%;
     opacity: 0;
   }
+  80% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 0.5;
+  }
   100% {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -282,7 +289,7 @@ li {
 
 .box-logo {
   margin: 10px 0px 10px 0px;
-  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 .box-logo__div, .box-logo__div__img {
@@ -306,26 +313,26 @@ li {
   background: opacity 0;
 }
 
-.geoloc {
+.geoloc_backg {
+  background: #e8e8e8;
+  margin: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: #e8e8e8;
-  margin: -10px;
+}
+
+.geoloc {
+  width: 260px;
   padding: 20px;
 }
 .geoloc__icone {
-  width: 40px;
+  width: 15%;
 }
 .geoloc__txt {
   border: none;
-  width: 300px;
+  width: 80%;
   background: 0;
-}
-
-.present__h1, .present__p {
-  font-size: 30px;
 }
 
 .present {
@@ -335,17 +342,20 @@ li {
   width: 100%;
   margin: 30px 0 30px 0px;
 }
-.present__h1, .present__p {
+.present__h1 {
   font-weight: 800;
-  width: 60%;
-  letter-spacing: 5px;
+  width: 85%;
+  letter-spacing: 2px;
   margin: 10px 0 5px 0px;
   text-align: center;
+  font-size: 26px;
 }
 .present__p {
-  font-weight: normal;
-  width: 40%;
   margin: 20px 0px 20px 0px;
+  font-size: 16px;
+  color: #707070;
+  width: 90%;
+  text-align: center;
 }
 .present__btnexploresto {
   display: flex;
@@ -539,109 +549,6 @@ li {
   width: 90%;
   padding-left: 20px;
   white-space: nowrap;
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .geoloc__txt {
-    width: 300px;
-  }
-  .fonctionmt__h1 {
-    transform: translateX(152pt);
-    transition: all 1.5s ease-in-out;
-  }
-  .fonctionmt__div {
-    width: 100%;
-    flex-shrink: 0;
-    width: 380px;
-  }
-  .fonctionmt__divbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0px 20px 0px;
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 992px) {
-  .geoloc__txt {
-    width: 300px;
-  }
-  .fonctionmt__divbox {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    transition: all 1.5s ease-in-out;
-    width: 90%;
-    flex-wrap: wrap;
-  }
-  .present__btnexploresto {
-    width: 32%;
-    font-size: 28px;
-    height: 80px;
-    transition: all 1.5s ease-in-out;
-  }
-  .resto, .resto__h2 {
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-  .resto__cards {
-    width: 48%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .section__resto {
-    width: 85%;
-  }
-  .fonctionmt__nb {
-    left: -13pt;
-    transition: all 1s ease-in;
-  }
-}
-@media screen and (min-width: 768px) {
-  .geoloc__icone, .geoloc__txt {
-    font-size: 40px;
-  }
-  .fonctionmt__nb {
-    left: -14pt;
-    transition: all 1s ease-in;
-  }
-}
-@media screen and (max-width: 768px) {
-  .geoloc__txt {
-    width: 185px;
-  }
-  .present__h1, .present__p {
-    font-size: 20px;
-  }
-  .present__h1, .present__p {
-    width: 100%;
-    letter-spacing: 0;
-  }
-  .present__p {
-    width: 80%;
-  }
-  .present__div {
-    width: 28%;
-    transition: all 1s linear;
-    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.6);
-    font-size: large;
-    flex-shrink: 0;
-    width: 360px;
-  }
-  .fonctionmt__divbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    transition: all 1.5s ease-in-out;
-    width: 90%;
-    flex-wrap: wrap;
-  }
-  .footer {
-    justify-content: center;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

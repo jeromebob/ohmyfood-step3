@@ -35,7 +35,7 @@ li{
 // HEADER
 .box-logo{
     margin: 10px 0px 10px 0px;
-    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.20);
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.40);
     z-index: 1;
         &__div{
             @include flexcenter100;
@@ -55,42 +55,41 @@ li{
 .geoloc__icone, .geoloc__txt{
     background: opacity (0) 
 }
-.geoloc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.geoloc_backg{
     background: #e8e8e8;
     margin: -10px;
+    @include flexcenter100;
+}
+.geoloc{
+    width: 260px;
     padding: 20px;
         &__icone{
-            width: 40px;
+            width: 15%;
         }
         &__txt{
             border: none;
-            width: 300px;
+            width: 80%;
             background: 0;
         }
 }
 // DESCRIPTION
-.present__h1, .present__p{
-    font-size: 30px;
-}
 .present{
     @include flexcenter100;
     margin: 30px 0 30px 0px;
         &__h1{
             font-weight: 800;
-            width: 60%;
-            letter-spacing: 5px;
+            width: 85%;
+            letter-spacing: 2px;
             margin: 10px 0 5px 0px;
             text-align: center;
+            font-size: 26px;
         }
         &__p{
-            @extend .present__h1;
-            font-weight: normal;
-            width: 40%;
             @include margin20TB;
+            font-size: 16px;
+            color: #707070;
+            width: 90%;
+            text-align: center;
         }
         &__btnexploresto{
             @include btnexploresto;
@@ -191,106 +190,3 @@ li{
     @include footer;
 }
 // MEDIA QUERIES
-@media screen and (min-width: 768px) and (max-width: 992px){
-    .geoloc__txt{
-        width: 300px;
-    }
-    .fonctionmt{
-        &__h1{
-            transform: translateX(152pt);
-            transition: all 1.5s ease-in-out;
-        }
-        &__div{
-            width: 100%;
-            flex-shrink: 0;
-            width: 380px;
-        }
-        &__divbox{
-            @include flexcenter100;
-            @include margin20TB;
-            flex-direction: column;
-        }
-    }
-}
-@media screen and (min-width: 992px){
-    .geoloc__txt{
-        width: 300px;
-    }
-    .fonctionmt__divbox{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        transition: all 1.5s ease-in-out;
-        width: 90%;
-        flex-wrap: wrap;
-        }
-    .present__btnexploresto{
-        width: 32%;
-        font-size: 28px;
-        height: 80px;
-        transition: all 1.5s ease-in-out;
-    }
-    .resto{
-        flex-flow: row wrap;
-        justify-content: space-between;
-            &__cards{
-                width: 48%;
-            }
-    }
-}
-@media screen and (max-width: 992px){
-    .section__resto{
-        width: 85%;
-    } 
-    .fonctionmt__nb{
-        left: -13pt;
-        transition: all 1s ease-in;
-        }
-}
-@media screen and (min-width: 768px){
-.geoloc__icone, .geoloc__txt{
-        font-size: 40px;
-    }
-.fonctionmt__nb{
-    left: -14pt;
-    transition: all 1s ease-in;
-    }
-}
-@media screen and (max-width: 768px){
-    .geoloc__txt{
-        width: 185px;
-    }
-    .present__h1, .present__p{
-        font-size: 20px;
-    }
-    .present{
-        &__h1{
-            width: 100%;
-            letter-spacing: 0;
-        }
-        &__p{
-            width: 80%;
-        }
-        &__div{
-            width: 28%;
-            transition: all 1s linear;
-            box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.6);
-            font-size: large;
-            flex-shrink: 0;
-            width: 360px;
-        }
-    }
-    .fonctionmt__divbox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        transition: all 1.5s ease-in-out;
-        width: 90%;
-        flex-wrap: wrap;
-    }
-    .footer{
-        justify-content: center;
-    }
-}
