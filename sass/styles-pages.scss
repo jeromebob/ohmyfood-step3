@@ -90,8 +90,8 @@ main{
     @include spacebetween;
     background-color: $blanc;
     @include box-menus;
-    -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
-	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+    -webkit-animation: apparition-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
+	        animation: apparition-menu 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3s both;
       &__div1{
             &__h3{
                 padding-left: $space10;    
