@@ -111,7 +111,7 @@ li{
             @include margin20TB;
             color: $noir;
             height: 80px;
-            border-radius: 20px;
+            border-radius: 30px;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -189,4 +189,61 @@ li{
 .footer{
     @include footer;
 }
-// MEDIA QUERIES
+// MEDIA QUERIES 
+@media screen and (min-width: 1440px) {
+    .geoloc{
+        width: 20%;
+        @include flexcenter;
+    }
+    .geoloc__icone, .geoloc__txt,
+    .present__h1, .present__p, 
+    .present__btnexploresto, .footer__logo{
+        font-size: 40px;
+    }
+    .present__btnexploresto{
+        max-width: 35%;
+        height: 90px;
+    }
+    .fonctionmt{
+        font-size: 30px;
+        &__divbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &__div{
+            margin: 20px 20px 20px 20px;
+            min-width: 30%;
+            height: 100px;
+        }
+    }
+    .section__resto{
+        @include flexcenter100;
+        flex-direction: column;
+    }
+    .resto{
+        flex-direction: row;
+        flex-wrap: wrap;
+    &__h2{
+        justify-content: flex-start;
+        width: 86%;
+        font-size: 40px;
+    }
+    &__cards{
+        min-width: 40%;
+        max-width: 40%;
+        height: 400px;
+        margin: 30px;
+    }
+    &__imgresto{
+        height: 320px;
+    }
+    }
+    .resto__txtcards__i,
+    .resto__txtcards__boxtxt,
+    .footer__ul{
+        font-size: 28px;
+    }
+}
